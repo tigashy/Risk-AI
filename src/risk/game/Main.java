@@ -9,24 +9,33 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
+import org.apache.log4j.Logger;
+
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.mapper.CannotResolveClassException;
 
 /**
  * @author bene
- *
+ * 
  */
 public class Main {
-	
+
+	private static final Logger logger = Logger.getLogger(Main.class);
 	private static final String CONFIG_FILE = "gamedata.xml";
 
 	/**
 	 * @param args
 	 */
-	/*public static void main(String[] args) {
+	public static void main(String[] args) {
+		loadCountries();
+
+	}
+
+	private static int loadCountries() {
 		try {
 			XStream xs = new XStream();
-			ObjectInputStream in = xs.createObjectInputStream(new FileReader(CONFIG_FILE));
+			ObjectInputStream in = xs.createObjectInputStream(new FileReader(
+					CONFIG_FILE));
 			while (true) {
 				Country c = (Country) in.readObject();
 			}
@@ -46,7 +55,6 @@ public class Main {
 				logger.error("There are errors in your suggestions.xml file. The program created a backup copy and replaced the file with a valid one.");
 			}
 		}
-
-	}*/
+	}
 
 }
