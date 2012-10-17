@@ -12,7 +12,6 @@ import org.apache.log4j.Logger;
 public class Main {
 
 	private static final Logger logger = Logger.getLogger(Main.class);
-	private static final String CONFIG_FILE = "gamedata.xml";
 
 	/**
 	 * @param args
@@ -22,7 +21,7 @@ public class Main {
 
 	}
 
-	private static int loadCountries() {
+	private static void loadCountries() {
 		
 	}
 
