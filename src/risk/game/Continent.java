@@ -20,6 +20,10 @@ public class Continent {
 	public Country[] getCountries() {
 		return countries;
 	}
+	
+	public Country getCountry(int position) {
+		return countries[position];
+	}
 
 	public int getBonusArmies() {
 		return bonusArmies;

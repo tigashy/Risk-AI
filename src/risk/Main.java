@@ -1,9 +1,11 @@
 /**
  * 
  */
-package risk.game;
+package risk;
 
 import org.apache.log4j.Logger;
+
+import risk.game.Engine;
 
 /**
  * @author bene
@@ -17,12 +19,8 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		loadCountries();
-
-	}
-
-	private static void loadCountries() {
-		
+		Engine gameEngine = new Engine();
+		gameEngine.run();
 	}
 
 }
