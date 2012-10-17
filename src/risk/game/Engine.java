@@ -82,78 +82,78 @@ public class Engine {
 		australia.setCountry(new Country(false, 3, "Western Australia", australia), 3);
 		
 		/* Setting neighbors for Alaska */
-		northAmerica.getCountry(0).setNeighbour(northAmerica.getCountry(1), 0);
-		northAmerica.getCountry(0).setNeighbour(northAmerica.getCountry(5), 1);
-		northAmerica.getCountry(0).setNeighbour(asia.getCountry(7), 2);
+		northAmerica.getCountry(0).setNeighbor(northAmerica.getCountry(1), 0);
+		northAmerica.getCountry(0).setNeighbor(northAmerica.getCountry(5), 1);
+		northAmerica.getCountry(0).setNeighbor(asia.getCountry(7), 2);
 		
 		/* Setting neighbors for Alberta */
-		northAmerica.getCountry(1).setNeighbour(northAmerica.getCountry(0), 0);
-		northAmerica.getCountry(1).setNeighbour(northAmerica.getCountry(5), 1);
-		northAmerica.getCountry(1).setNeighbour(northAmerica.getCountry(6), 2);
-		northAmerica.getCountry(1).setNeighbour(northAmerica.getCountry(8), 3);
+		northAmerica.getCountry(1).setNeighbor(northAmerica.getCountry(0), 0);
+		northAmerica.getCountry(1).setNeighbor(northAmerica.getCountry(5), 1);
+		northAmerica.getCountry(1).setNeighbor(northAmerica.getCountry(6), 2);
+		northAmerica.getCountry(1).setNeighbor(northAmerica.getCountry(8), 3);
 		
 		/* Setting neighbors for Central America */
-		northAmerica.getCountry(2).setNeighbour(northAmerica.getCountry(3), 0);
-		northAmerica.getCountry(2).setNeighbour(northAmerica.getCountry(8), 1);
-		northAmerica.getCountry(2).setNeighbour(southAmerica.getCountry(3), 2);
+		northAmerica.getCountry(2).setNeighbor(northAmerica.getCountry(3), 0);
+		northAmerica.getCountry(2).setNeighbor(northAmerica.getCountry(8), 1);
+		northAmerica.getCountry(2).setNeighbor(southAmerica.getCountry(3), 2);
 		
 		/* Setting neighbors for Eastern United States */
-		northAmerica.getCountry(3).setNeighbour(northAmerica.getCountry(2), 0);
-		northAmerica.getCountry(3).setNeighbour(northAmerica.getCountry(6), 1);
-		northAmerica.getCountry(3).setNeighbour(northAmerica.getCountry(7), 2);
-		northAmerica.getCountry(3).setNeighbour(northAmerica.getCountry(8), 3);
+		northAmerica.getCountry(3).setNeighbor(northAmerica.getCountry(2), 0);
+		northAmerica.getCountry(3).setNeighbor(northAmerica.getCountry(6), 1);
+		northAmerica.getCountry(3).setNeighbor(northAmerica.getCountry(7), 2);
+		northAmerica.getCountry(3).setNeighbor(northAmerica.getCountry(8), 3);
 		
 		/* Setting neighbors for Greenland */
-		northAmerica.getCountry(4).setNeighbour(northAmerica.getCountry(5), 0);
-		northAmerica.getCountry(4).setNeighbour(northAmerica.getCountry(6), 1);
-		northAmerica.getCountry(4).setNeighbour(northAmerica.getCountry(7), 2);
-		northAmerica.getCountry(4).setNeighbour(europe.getCountry(1), 3);
+		northAmerica.getCountry(4).setNeighbor(northAmerica.getCountry(5), 0);
+		northAmerica.getCountry(4).setNeighbor(northAmerica.getCountry(6), 1);
+		northAmerica.getCountry(4).setNeighbor(northAmerica.getCountry(7), 2);
+		northAmerica.getCountry(4).setNeighbor(europe.getCountry(1), 3);
 		
 		/* Setting neighbors for Northwest Territory */
-		northAmerica.getCountry(5).setNeighbour(northAmerica.getCountry(0), 0);
-		northAmerica.getCountry(5).setNeighbour(northAmerica.getCountry(1), 1);
-		northAmerica.getCountry(5).setNeighbour(northAmerica.getCountry(6), 2);
-		northAmerica.getCountry(5).setNeighbour(northAmerica.getCountry(4), 3);
+		northAmerica.getCountry(5).setNeighbor(northAmerica.getCountry(0), 0);
+		northAmerica.getCountry(5).setNeighbor(northAmerica.getCountry(1), 1);
+		northAmerica.getCountry(5).setNeighbor(northAmerica.getCountry(6), 2);
+		northAmerica.getCountry(5).setNeighbor(northAmerica.getCountry(4), 3);
 		
 		/* Setting neighbors for Ontario */
-		northAmerica.getCountry(6).setNeighbour(northAmerica.getCountry(1), 0);
-		northAmerica.getCountry(6).setNeighbour(northAmerica.getCountry(3), 1);
-		northAmerica.getCountry(6).setNeighbour(northAmerica.getCountry(4), 2);
-		northAmerica.getCountry(6).setNeighbour(northAmerica.getCountry(5), 3);
-		northAmerica.getCountry(6).setNeighbour(northAmerica.getCountry(7), 4);
-		northAmerica.getCountry(6).setNeighbour(northAmerica.getCountry(8), 5);
+		northAmerica.getCountry(6).setNeighbor(northAmerica.getCountry(1), 0);
+		northAmerica.getCountry(6).setNeighbor(northAmerica.getCountry(3), 1);
+		northAmerica.getCountry(6).setNeighbor(northAmerica.getCountry(4), 2);
+		northAmerica.getCountry(6).setNeighbor(northAmerica.getCountry(5), 3);
+		northAmerica.getCountry(6).setNeighbor(northAmerica.getCountry(7), 4);
+		northAmerica.getCountry(6).setNeighbor(northAmerica.getCountry(8), 5);
 		
 		/* Setting neighbors for Quebec */
-		northAmerica.getCountry(7).setNeighbour(northAmerica.getCountry(3), 0);
-		northAmerica.getCountry(7).setNeighbour(northAmerica.getCountry(4), 1);
-		northAmerica.getCountry(7).setNeighbour(northAmerica.getCountry(5), 2);
-		northAmerica.getCountry(7).setNeighbour(northAmerica.getCountry(6), 3);
+		northAmerica.getCountry(7).setNeighbor(northAmerica.getCountry(3), 0);
+		northAmerica.getCountry(7).setNeighbor(northAmerica.getCountry(4), 1);
+		northAmerica.getCountry(7).setNeighbor(northAmerica.getCountry(5), 2);
+		northAmerica.getCountry(7).setNeighbor(northAmerica.getCountry(6), 3);
 		
 		/* Setting neighbors for Western United States */
-		northAmerica.getCountry(8).setNeighbour(northAmerica.getCountry(1), 0);
-		northAmerica.getCountry(8).setNeighbour(northAmerica.getCountry(2), 1);
-		northAmerica.getCountry(8).setNeighbour(northAmerica.getCountry(3), 2);
-		northAmerica.getCountry(8).setNeighbour(northAmerica.getCountry(6), 3);
+		northAmerica.getCountry(8).setNeighbor(northAmerica.getCountry(1), 0);
+		northAmerica.getCountry(8).setNeighbor(northAmerica.getCountry(2), 1);
+		northAmerica.getCountry(8).setNeighbor(northAmerica.getCountry(3), 2);
+		northAmerica.getCountry(8).setNeighbor(northAmerica.getCountry(6), 3);
 		
 		/* Setting neighbors for Argentina */
-		southAmerica.getCountry(0).setNeighbour(southAmerica.getCountry(1), 0);
-		southAmerica.getCountry(0).setNeighbour(southAmerica.getCountry(2), 1);
+		southAmerica.getCountry(0).setNeighbor(southAmerica.getCountry(1), 0);
+		southAmerica.getCountry(0).setNeighbor(southAmerica.getCountry(2), 1);
 		
 		/* Setting neighbors for Brazil */
-		southAmerica.getCountry(1).setNeighbour(southAmerica.getCountry(0), 0);
-		southAmerica.getCountry(1).setNeighbour(southAmerica.getCountry(2), 1);
-		southAmerica.getCountry(1).setNeighbour(southAmerica.getCountry(3), 2);
-		southAmerica.getCountry(1).setNeighbour(africa.getCountry(4), 3);
+		southAmerica.getCountry(1).setNeighbor(southAmerica.getCountry(0), 0);
+		southAmerica.getCountry(1).setNeighbor(southAmerica.getCountry(2), 1);
+		southAmerica.getCountry(1).setNeighbor(southAmerica.getCountry(3), 2);
+		southAmerica.getCountry(1).setNeighbor(africa.getCountry(4), 3);
 		
 		/* Setting neighbors for Peru */
-		southAmerica.getCountry(2).setNeighbour(southAmerica.getCountry(0), 0);
-		southAmerica.getCountry(2).setNeighbour(southAmerica.getCountry(1), 1);
-		southAmerica.getCountry(2).setNeighbour(southAmerica.getCountry(3), 2);
+		southAmerica.getCountry(2).setNeighbor(southAmerica.getCountry(0), 0);
+		southAmerica.getCountry(2).setNeighbor(southAmerica.getCountry(1), 1);
+		southAmerica.getCountry(2).setNeighbor(southAmerica.getCountry(3), 2);
 		
 		/* Setting neighbors for Peru */
-		southAmerica.getCountry(3).setNeighbour(southAmerica.getCountry(1), 0);
-		southAmerica.getCountry(3).setNeighbour(southAmerica.getCountry(2), 1);
-		southAmerica.getCountry(3).setNeighbour(northAmerica.getCountry(2), 2);
+		southAmerica.getCountry(3).setNeighbor(southAmerica.getCountry(1), 0);
+		southAmerica.getCountry(3).setNeighbor(southAmerica.getCountry(2), 1);
+		southAmerica.getCountry(3).setNeighbor(northAmerica.getCountry(2), 2);
 	}
 	
 	private void initGameCards() {

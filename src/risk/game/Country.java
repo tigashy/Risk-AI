@@ -4,21 +4,21 @@ package risk.game;
 public class Country {
 	
 	private boolean continentBorder;
-	private Country[] neighbours;
+	private Country[] neighbors;
 	private String name;
 	private int numberOfArmies;
 	private Continent continent;
 	
-	public Country(boolean continentBorder, int numberOfNeighbours, String name, Continent continent) {
+	public Country(boolean continentBorder, int numberOfNeighbors, String name, Continent continent) {
 		this.continentBorder = continentBorder;
-		this.neighbours = new Country[numberOfNeighbours];
+		this.neighbors = new Country[numberOfNeighbors];
 		this.name = name;
 		this.numberOfArmies = 0;
 		this.continent = continent;
 	}
 	
-	public void setNeighbour(Country neighbour, int position) {
-		this.neighbours[position] = neighbour;
+	public void setNeighbor(Country neighbor, int position) {
+		this.neighbors[position] = neighbor;
 	}
 
 	public int getNumberOfArmies() {
@@ -37,8 +37,8 @@ public class Country {
 		return continentBorder;
 	}
 
-	public Country[] getNeighbours() {
-		return neighbours;
+	public Country[] getNeighbors() {
+		return neighbors;
 	}
 
 	public String getName() {
