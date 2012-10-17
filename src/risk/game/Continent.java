@@ -1,10 +1,30 @@
 package risk.game;
 
-import java.util.ArrayList;
 
 public class Continent {
 
 	private String name;
-	private ArrayList<Country> countries;
+	private Country[] countries;
 	private int bonusArmies;
+	
+	public Continent(String name, int bonusArmies, int numberOfCountries) {
+		this.name = name;
+		this.bonusArmies = bonusArmies;
+		this.countries = new Country[numberOfCountries];
+	}
+
+	public String toString() {
+		return name;
+	}
+
+	public Country[] getCountries() {
+		return countries;
+	}
+
+	public int getBonusArmies() {
+		return bonusArmies;
+	}
+	public void setCountry(Country country, int position) {
+		this.countries[position] = country;
+	}
 }
