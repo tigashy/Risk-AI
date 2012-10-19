@@ -150,7 +150,7 @@ public class Engine {
 		southAmerica.getCountry(2).setNeighbor(southAmerica.getCountry(1), 1);
 		southAmerica.getCountry(2).setNeighbor(southAmerica.getCountry(3), 2);
 		
-		/* Setting neighbors for Peru */
+		/* Setting neighbors for Venezuela */
 		southAmerica.getCountry(3).setNeighbor(southAmerica.getCountry(1), 0);
 		southAmerica.getCountry(3).setNeighbor(southAmerica.getCountry(2), 1);
 		southAmerica.getCountry(3).setNeighbor(northAmerica.getCountry(2), 2);
