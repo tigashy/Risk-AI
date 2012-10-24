@@ -1,14 +1,15 @@
 package risk.gui;
 
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -40,6 +41,37 @@ public class gui {
 	JLabel lblComputer = new JLabel("Computer:");
 	JPanel pnlMenue = new JPanel();
 	JPanel pnlGame = new JPanel();
+	
+	ImageLabel lAfrikaAmerika = new ImageLabel("Images/Linien/AmeikaAfrika.gif");
+	ImageLabel lnAmerika1 = new ImageLabel("Images/Linien/1.gif");
+	ImageLabel lnAmerika2 = new ImageLabel("Images/Linien/2.gif");
+	ImageLabel lnAmerika3 = new ImageLabel("Images/Linien/3.gif");
+	ImageLabel lAmerikaEuropa = new ImageLabel("Images/Linien/AmerikaEuropa.gif");
+	ImageLabel lEuropa1 = new ImageLabel("Images/Linien/Europa1.gif");
+	ImageLabel lEuropa2 = new ImageLabel("Images/Linien/Europa2.gif");
+	ImageLabel lEuropa3 = new ImageLabel("Images/Linien/Europa3.gif");
+	ImageLabel lEuropa4 = new ImageLabel("Images/Linien/Europa4.gif");
+	ImageLabel lEuropa5 = new ImageLabel("Images/Linien/Europa5.gif");
+	ImageLabel lEuropa6 = new ImageLabel("Images/Linien/Europa6.gif");
+	ImageLabel lAfrika1 = new ImageLabel("Images/Linien/afrika1.gif");
+	ImageLabel lAfrika2 = new ImageLabel("Images/Linien/afrika2.gif");
+	ImageLabel lEuropaAfrika1 = new ImageLabel("Images/Linien/afrikaEuropa1.gif");
+	ImageLabel lEuropaAfrika2 = new ImageLabel("Images/Linien/afrikaEuropa2.gif");
+	ImageLabel lEuropaAfrika3 = new ImageLabel("Images/Linien/afrikaEuropa3.gif");
+	ImageLabel lAfrikaAsien = new ImageLabel("Images/Linien/afrikaAsien.gif");
+	ImageLabel lAsien1 = new ImageLabel("Images/Linien/Asien1.gif");
+	ImageLabel lAsien2 = new ImageLabel("Images/Linien/Asien2.gif");
+	ImageLabel lAustralien1 = new ImageLabel("Images/Linien/Australien1.gif");
+	ImageLabel lAustralien2 = new ImageLabel("Images/Linien/Australien2.gif");
+	ImageLabel lAustralien3 = new ImageLabel("Images/Linien/Australien3.gif");
+	ImageLabel lAustralien4 = new ImageLabel("Images/Linien/Australien4.gif");
+	ImageLabel lAustralien5 = new ImageLabel("Images/Linien/Australien5.gif");
+	ImageLabel lAsienAmerika1 = new ImageLabel("Images/Linien/AsienAmerika1.gif");
+	ImageLabel lAsienAmerika2 = new ImageLabel("Images/Linien/AsienAmerika2.gif");
+	
+	
+	
+	
 	ImageLabel nAmerika_1 = new ImageLabel();
 	ImageLabel nAmerika_2 = new ImageLabel();
 	ImageLabel nAmerika_3 = new ImageLabel();
@@ -159,6 +191,61 @@ public class gui {
 	
 	public void position()
 	{
+		//Linien
+		lAfrikaAmerika.setBounds(300, 300, 80, 80);
+		lnAmerika1.setBounds(220, 60, 80, 80);
+		lnAmerika2.setBounds(199, 74, 80, 80);
+		lnAmerika3.setBounds(230, 90, 80, 80);
+		lAmerikaEuropa.setBounds(350, 80, 80, 80);
+		lEuropa1.setBounds(390, 99, 80, 80);
+		lEuropa2.setBounds(378, 99, 80, 80);
+		lEuropa3.setBounds(393, 135, 80, 80);
+		lEuropa4.setBounds(380, 150, 80, 80);
+		lEuropa5.setBounds(380, 140, 80, 80);
+		lEuropa6.setBounds(400, 140, 80, 80);
+		lAfrika1.setBounds(535, 380, 80, 80);
+		lAfrika2.setBounds(535, 350, 80, 80);
+		lEuropaAfrika1.setBounds(370, 210, 80, 80);
+		lEuropaAfrika2.setBounds(420, 199, 80, 80);
+		lEuropaAfrika3.setBounds(440, 220, 80, 80);
+		lAfrikaAsien.setBounds(515, 280, 80, 80);
+		lAsien1.setBounds(775, 200, 80, 80);
+		lAsien2.setBounds(800, 170, 80, 80);
+		lAustralien1.setBounds(745, 300, 80, 80);
+		lAustralien2.setBounds(770, 390, 80, 80);
+		lAustralien3.setBounds(820, 390, 80, 80);
+		lAustralien4.setBounds(750, 350, 80, 80);
+		lAustralien5.setBounds(785, 390, 80, 80);
+		lAsienAmerika1.setBounds(890, 110, 80, 80);
+		lAsienAmerika2.setBounds(-50, 70, 80, 80);
+		
+		pnlGame.add(lAsienAmerika1);
+		pnlGame.add(lAsienAmerika2);
+		pnlGame.add(lAustralien1);
+		pnlGame.add(lAustralien2);
+		pnlGame.add(lAustralien3);
+		pnlGame.add(lAustralien4);
+		pnlGame.add(lAustralien5);
+		pnlGame.add(lAsien1);
+		pnlGame.add(lAsien2);
+		pnlGame.add(lAfrikaAsien);
+		pnlGame.add(lEuropaAfrika1);
+		pnlGame.add(lEuropaAfrika2);
+		pnlGame.add(lEuropaAfrika3);
+		pnlGame.add(lAfrika1);
+		pnlGame.add(lAfrika2);
+		pnlGame.add(lEuropa1);
+		pnlGame.add(lEuropa2);
+		pnlGame.add(lEuropa3);
+		pnlGame.add(lEuropa4);
+		pnlGame.add(lEuropa5);
+		pnlGame.add(lEuropa6);
+		pnlGame.add(lAmerikaEuropa);
+		pnlGame.add(lAfrikaAmerika);
+		pnlGame.add(lnAmerika1);
+		pnlGame.add(lnAmerika2);
+		pnlGame.add(lnAmerika3);
+		
 		lblArmies.setBounds(0, 0, 80, 20);
 		pnlGame.add(lblArmies); 
 		lblNumbers.setBounds(100, 0, 80, 20);
@@ -167,7 +254,6 @@ public class gui {
 		
 				
 		nAmerika_1.setBounds(0, 80, 120, 60);
-		nAmerika_1.setBorder(BorderFactory.createLineBorder(Color.black));
 		nAmerika_1.setName("nAmerika_1");
 		nAmerika_1.setText("1");
 		nAmerika_1.setForeground(Color.WHITE);
@@ -230,6 +316,7 @@ public class gui {
 		nAmerika_5.setForeground(Color.WHITE);
 		nAmerika_5.setHorizontalTextPosition(JLabel.CENTER);
 		nAmerika_5.setVerticalTextPosition(JLabel.CENTER);
+		
 		
 	    pnlGame.add(nAmerika_1);    
 	    pnlGame.add(nAmerika_2);
@@ -525,7 +612,8 @@ public class gui {
 	public gui(){		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(980, 600);
-		frame.setTitle("Risiko");		
+		frame.setTitle("Risiko");	
+		frame.setResizable(false);
 		Player();	    
 		frame.setVisible(true);
 	}
