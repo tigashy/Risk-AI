@@ -1,19 +1,18 @@
 package risk.game;
 
 public class RiscCard {
-	private Symbol symbol;
-	private Country country;
 	
-	public RiscCard(Symbol symbol, Country country) {
+	/*
+	 * 1.Soldier
+	 * 2.Cavalryman
+	 * 3.Canon
+	 */
+	private int symbol;
+	
+	public RiscCard(int symbol) {
 		this.symbol = symbol;
-		this.country = country;
 	}
-	
-	public Country getCountry() {
-		return this.country;
-	}
-	
-	public Symbol getSymbol() {
+	public int getSymbol() {
 		return this.symbol;
 	}
 
