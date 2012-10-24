@@ -235,6 +235,44 @@ public class Engine {
 		africa.getCountry(5).setNeighbor(africa.getCountry(0), 0);
 		africa.getCountry(5).setNeighbor(africa.getCountry(1), 1);
 		africa.getCountry(5).setNeighbor(africa.getCountry(3), 2);
+		
+		/* Setting neighbors for Afghanistan */
+		asia.getCountry(0).setNeighbor(asia.getCountry(1), 0);
+		asia.getCountry(0).setNeighbor(asia.getCountry(2), 1);
+		asia.getCountry(0).setNeighbor(asia.getCountry(6), 2);
+		asia.getCountry(0).setNeighbor(asia.getCountry(10), 3);
+		asia.getCountry(0).setNeighbor(europe.getCountry(5), 4);
+		
+		/* Setting neighbors for China */
+		asia.getCountry(1).setNeighbor(asia.getCountry(0), 0);
+		asia.getCountry(1).setNeighbor(asia.getCountry(2), 1);
+		asia.getCountry(1).setNeighbor(asia.getCountry(7), 2);
+		asia.getCountry(1).setNeighbor(asia.getCountry(8), 3);
+		asia.getCountry(1).setNeighbor(asia.getCountry(9), 4);
+		asia.getCountry(1).setNeighbor(asia.getCountry(10), 5);
+		
+		/* Setting neighbors for India */
+		asia.getCountry(2).setNeighbor(asia.getCountry(0), 0);
+		asia.getCountry(2).setNeighbor(asia.getCountry(2), 1);
+		asia.getCountry(2).setNeighbor(asia.getCountry(6), 2);
+		asia.getCountry(2).setNeighbor(asia.getCountry(8), 3);
+		
+		/* Setting neighbors for Irkutsk */
+		asia.getCountry(3).setNeighbor(asia.getCountry(5), 0);
+		asia.getCountry(3).setNeighbor(asia.getCountry(7), 1);
+		asia.getCountry(3).setNeighbor(asia.getCountry(9), 2);
+		asia.getCountry(3).setNeighbor(asia.getCountry(11), 3);
+		
+		/* Setting neighbors for Japan */
+		asia.getCountry(4).setNeighbor(asia.getCountry(5), 0);
+		asia.getCountry(4).setNeighbor(asia.getCountry(7), 1);
+		
+		/* Setting neighbors for Kamchatka */
+		asia.getCountry(5).setNeighbor(asia.getCountry(3), 0);
+		asia.getCountry(5).setNeighbor(asia.getCountry(4), 1);
+		asia.getCountry(5).setNeighbor(asia.getCountry(7), 2);
+		asia.getCountry(5).setNeighbor(asia.getCountry(11), 3);
+		asia.getCountry(5).setNeighbor(northAmerica.getCountry(0), 4);
 	}
 	
 	private void initGameCards() {
