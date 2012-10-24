@@ -22,22 +22,13 @@ import javax.swing.JRadioButton;
 
 public class gui {
 	JFrame frame = new JFrame();
-	JLabel lblArmies = new JLabel("New Armies:");
-	JLabel lblNumbers = new JLabel();
-	JRadioButton rb1Human = new JRadioButton("1");
-	JRadioButton rb2Human = new JRadioButton("2");
-	JRadioButton rb3Human = new JRadioButton("3");
-	JRadioButton rb4Human = new JRadioButton("4");
-	JRadioButton rb5Human = new JRadioButton("5");
 	JRadioButton rb1Computer = new JRadioButton("1");
 	JRadioButton rb2Computer = new JRadioButton("2");
 	JRadioButton rb3Computer = new JRadioButton("3");
 	JRadioButton rb4Computer = new JRadioButton("4");
 	JRadioButton rb5Computer = new JRadioButton("5");
-	ButtonGroup groupHuman = new ButtonGroup();
 	ButtonGroup groupComputer = new ButtonGroup();
 	JButton btnPlay = new JButton("Play");
-	JLabel lblHuman = new JLabel("Human:");
 	JLabel lblComputer = new JLabel("Computer:");
 	JPanel pnlMenue = new JPanel();
 	JPanel pnlGame = new JPanel();
@@ -245,13 +236,6 @@ public class gui {
 		pnlGame.add(lnAmerika1);
 		pnlGame.add(lnAmerika2);
 		pnlGame.add(lnAmerika3);
-		
-		lblArmies.setBounds(0, 0, 80, 20);
-		pnlGame.add(lblArmies); 
-		lblNumbers.setBounds(100, 0, 80, 20);
-		lblNumbers.setText("10");
-		pnlGame.add(lblNumbers); 
-		
 				
 		nAmerika_1.setBounds(0, 80, 120, 60);
 		nAmerika_1.setName("nAmerika_1");
@@ -640,17 +624,7 @@ public class gui {
 		
 		pnlMenue.setLayout(new GridBagLayout());	
 		
-		groupHuman.add( rb1Human );
-		rb1Human.setActionCommand("1");
-		rb1Human.setSelected(true);
-		groupHuman.add( rb2Human );
-		rb2Human.setActionCommand("2");
-		groupHuman.add( rb3Human );
-		rb3Human.setActionCommand("3");
-		groupHuman.add( rb4Human );
-		rb4Human.setActionCommand("4");
-		groupHuman.add( rb5Human );
-		rb5Human.setActionCommand("5");
+		
 		
 		groupComputer.add( rb1Computer );
 		rb1Computer.setActionCommand("1");
@@ -664,48 +638,8 @@ public class gui {
 		groupComputer.add( rb5Computer );
 		rb5Computer.setActionCommand("5");
 		
-		pnlMenue.add( lblHuman,new GridBagConstraints(
-									0, 0, 
-									1, 1,
-			 						0.0, 0.0, 
-									GridBagConstraints.LINE_START, 										GridBagConstraints.HORIZONTAL, 
-									new Insets(10, 10, 10, 10),
-									0, 0));
-		pnlMenue.add( rb1Human,new GridBagConstraints(
-									1, 0, 
-									1, 1,
-										0.0, 0.0, 
-									GridBagConstraints.LINE_START, 										GridBagConstraints.HORIZONTAL, 
-									new Insets(10, 10, 10, 10),
-									0, 0));
-		pnlMenue.add( rb2Human,new GridBagConstraints(
-									2, 0, 
-									1, 1,
-										0.0, 0.0, 
-									GridBagConstraints.LINE_START, 										GridBagConstraints.HORIZONTAL, 
-									new Insets(10, 10, 10, 10),
-									0, 0));
-		pnlMenue.add( rb3Human,new GridBagConstraints(
-									3, 0, 
-									1, 1,
-										0.0, 0.0, 
-									GridBagConstraints.LINE_START, 										GridBagConstraints.HORIZONTAL, 
-									new Insets(10, 10, 10, 10),
-									0, 0));
-		pnlMenue.add( rb4Human,new GridBagConstraints(
-									4, 0, 
-									1, 1,
-										0.0, 0.0, 
-									GridBagConstraints.LINE_START, 										GridBagConstraints.HORIZONTAL, 
-									new Insets(10, 10, 10, 10),
-									0, 0));
-		pnlMenue.add( rb5Human,new GridBagConstraints(
-									5, 0, 
-									1, 1,
-										0.0, 0.0, 
-									GridBagConstraints.LINE_START, 										GridBagConstraints.HORIZONTAL, 
-									new Insets(10, 10, 10, 10),
-									0, 0));
+		
+		
 		pnlMenue.add( rb1Computer,new GridBagConstraints(
 									1, 1, 
 									1, 1,
@@ -756,116 +690,7 @@ public class gui {
 									new Insets(10, 10, 10, 10),
 									0, 0));
 		 frame.add(pnlMenue);
-		rb1Computer.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-			rb5Human.setVisible(true);	
-			rb4Human.setVisible(true);
-			rb3Human.setVisible(true);
-			rb2Human.setVisible(true);
-			}
-		});
-		rb2Computer.addActionListener(new ActionListener() {
-					
-			@Override
-			public void actionPerformed(ActionEvent arg0) {	
-				rb5Human.setVisible(false);	
-				rb4Human.setVisible(true);
-				rb3Human.setVisible(true);
-				rb2Human.setVisible(true);
-			}
-		});
-		rb3Computer.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent arg0) {	
-				rb5Human.setVisible(false);	
-				rb4Human.setVisible(false);
-				rb3Human.setVisible(true);
-				rb2Human.setVisible(true);
-			}
-		});
-		rb4Computer.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent arg0) {	
-				rb5Human.setVisible(false);	
-				rb4Human.setVisible(false);
-				rb3Human.setVisible(false);
-				rb2Human.setVisible(true);
-			}
-		});
-		rb5Computer.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent arg0) {	
-				rb5Human.setVisible(false);	
-				rb4Human.setVisible(false);
-				rb3Human.setVisible(false);
-				rb2Human.setVisible(false);
-			}
-		});
-		rb1Human.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent arg0) {	
-				rb5Computer.setVisible(true);	
-				rb4Computer.setVisible(true);
-				rb3Computer.setVisible(true);	
-				rb2Computer.setVisible(true);	
-				rb1Computer.setVisible(true);
-				lblComputer.setVisible(true);
-			}
-		});
-		rb2Human.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent arg0) {	
-				rb5Computer.setVisible(false);	
-				rb4Computer.setVisible(true);
-				rb3Computer.setVisible(true);	
-				rb2Computer.setVisible(true);	
-				rb1Computer.setVisible(true);
-				lblComputer.setVisible(true);
-			}
-		});
-		rb3Human.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent arg0) {	
-				rb5Computer.setVisible(false);	
-				rb4Computer.setVisible(false);
-				rb3Computer.setVisible(true);	
-				rb2Computer.setVisible(true);	
-				rb1Computer.setVisible(true);
-				lblComputer.setVisible(true);
-			}
-		});
-		rb4Human.addActionListener(new ActionListener() {
-	
-			@Override
-			public void actionPerformed(ActionEvent arg0) {	
-				rb5Computer.setVisible(false);	
-				rb4Computer.setVisible(false);	
-				rb3Computer.setVisible(false);	
-				rb2Computer.setVisible(true);	
-				rb1Computer.setVisible(true);
-				lblComputer.setVisible(true);
-			}
-		});
-		rb5Human.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent arg0) {	
-				rb5Computer.setVisible(false);	
-				rb4Computer.setVisible(false);	
-				rb3Computer.setVisible(false);	
-				rb2Computer.setVisible(false);	
-				rb1Computer.setVisible(true);
-				lblComputer.setVisible(true);
-			}
-		});
+		
 		
 		
 		btnPlay.addActionListener(new ActionListener() {			
@@ -875,7 +700,7 @@ public class gui {
 				pnlMenue.setVisible(false);				
 				Game();
 				System.out.println();
-				inizialGame(groupHuman.getSelection().getActionCommand(),groupComputer.getSelection().getActionCommand());
+				inizialGame();
 				
 			}
 		});
@@ -883,7 +708,7 @@ public class gui {
 	
 	
 	
-	public void inizialGame(String hNumbers, String cNumbers)
+	public void inizialGame()
 	{
 		SetNewColor(nAmerika_1, "1", "rot");
 		SetNewColor(nAmerika_2, "1", "blau");
