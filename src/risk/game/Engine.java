@@ -200,6 +200,41 @@ public class Engine {
 		europe.getCountry(3).setNeighbor(europe.getCountry(2), 1);
 		europe.getCountry(3).setNeighbor(europe.getCountry(4), 2);
 		europe.getCountry(3).setNeighbor(africa.getCountry(4), 3);
+		
+		/* Setting neighbors for Congo */
+		africa.getCountry(0).setNeighbor(africa.getCountry(1), 0);
+		africa.getCountry(0).setNeighbor(africa.getCountry(4), 1);
+		africa.getCountry(0).setNeighbor(africa.getCountry(5), 2);
+		
+		/* Setting neighbors for East Africa */
+		africa.getCountry(1).setNeighbor(africa.getCountry(0), 0);
+		africa.getCountry(1).setNeighbor(africa.getCountry(2), 1);
+		africa.getCountry(1).setNeighbor(africa.getCountry(3), 2);
+		africa.getCountry(1).setNeighbor(africa.getCountry(4), 3);
+		africa.getCountry(1).setNeighbor(africa.getCountry(5), 4);
+		africa.getCountry(1).setNeighbor(asia.getCountry(6), 5);
+		
+		/* Setting neighbors for Egypt */
+		africa.getCountry(2).setNeighbor(africa.getCountry(1), 0);
+		africa.getCountry(2).setNeighbor(africa.getCountry(4), 1);
+		africa.getCountry(2).setNeighbor(europe.getCountry(4), 2);
+		africa.getCountry(2).setNeighbor(asia.getCountry(6), 3);
+		
+		/* Setting neighbors for Madagascar */
+		africa.getCountry(3).setNeighbor(africa.getCountry(1), 0);
+		africa.getCountry(3).setNeighbor(africa.getCountry(5), 1);
+		
+		/* Setting neighbors for North Africa */
+		africa.getCountry(4).setNeighbor(africa.getCountry(0), 0);
+		africa.getCountry(4).setNeighbor(africa.getCountry(1), 1);
+		africa.getCountry(4).setNeighbor(africa.getCountry(2), 2);
+		africa.getCountry(4).setNeighbor(southAmerica.getCountry(1), 3);
+		africa.getCountry(4).setNeighbor(europe.getCountry(6), 4);
+		
+		/* Setting neighbors for South Africa */
+		africa.getCountry(5).setNeighbor(africa.getCountry(0), 0);
+		africa.getCountry(5).setNeighbor(africa.getCountry(1), 1);
+		africa.getCountry(5).setNeighbor(africa.getCountry(3), 2);
 	}
 	
 	private void initGameCards() {
