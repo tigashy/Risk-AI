@@ -146,37 +146,8 @@ public class gui {
 	public void mousePressed(MouseEvent e) {
 		System.out.println("HIER");
 	}
-	MouseListener upDown = new MouseListener() 
-	{
-		@Override
-		public void mouseClicked(MouseEvent arg0) {		}
+	
 
-		@Override
-		public void mouseEntered(MouseEvent arg0) {}
-
-		@Override
-		public void mouseExited(MouseEvent arg0) {}
-
-		@Override
-		public void mousePressed(MouseEvent arg0) {
-			ImageLabel lbl = (ImageLabel) arg0.getComponent();
-			if(arg0.getButton()== 1)
-			{
-				int nr = Integer.parseInt(lbl.getText());
-				nr += 1;
-				lbl.setText(""+nr);
-			}
-			else if(arg0.getButton() == 3){
-				int nr = Integer.parseInt(lbl.getText());
-				if(nr != 0) 
-					nr -= 1;
-				lbl.setText(""+nr);
-			}
-		}
-
-		@Override
-		public void mouseReleased(MouseEvent arg0) {}
-	};
 	
 	
 	
@@ -243,30 +214,25 @@ public class gui {
 		nAmerika_1.setForeground(Color.WHITE);
 		nAmerika_1.setHorizontalTextPosition(JLabel.CENTER);
 		nAmerika_1.setVerticalTextPosition(JLabel.CENTER);
-		nAmerika_1.addMouseListener(upDown);
 		nAmerika_6.setBounds(15, 0, 300, 200);
 		nAmerika_6.setName("nAmerika_6");
 		nAmerika_6.setForeground(Color.WHITE);
 		nAmerika_6.setText("6");
-		nAmerika_6.addMouseListener(upDown);
 		nAmerika_6.setHorizontalTextPosition(JLabel.CENTER);
 		nAmerika_6.setVerticalTextPosition(JLabel.CENTER);
 		nAmerika_2.setBounds(80, 90, 200, 100);
 		nAmerika_2.setName("nAmerika_2");
 		nAmerika_2.setText("2");
-		nAmerika_2.addMouseListener(upDown);
 		nAmerika_2.setForeground(Color.WHITE);
 		nAmerika_2.setHorizontalTextPosition(JLabel.CENTER);
 		nAmerika_2.setVerticalTextPosition(JLabel.CENTER);
 		nAmerika_7.setBounds(135, 55, 200, 200);
-		nAmerika_7.addMouseListener(upDown);
 		nAmerika_7.setText("7");
 		nAmerika_7.setName("nAmerika_7");
 		nAmerika_7.setForeground(Color.WHITE);
 		nAmerika_7.setHorizontalTextPosition(JLabel.CENTER);
 		nAmerika_7.setVerticalTextPosition(JLabel.CENTER);
 		nAmerika_9.setBounds(66, 90, 200, 200);
-		nAmerika_9.addMouseListener(upDown);
 		nAmerika_9.setName("nAmerika_9");
 		nAmerika_9.setText("9");
 		nAmerika_9.setForeground(Color.WHITE);
@@ -274,28 +240,24 @@ public class gui {
 		nAmerika_9.setVerticalTextPosition(JLabel.CENTER);
 		nAmerika_4.setBounds(102, 100, 200, 200);
 		nAmerika_4.setText("4");
-		nAmerika_4.addMouseListener(upDown);
 		nAmerika_4.setName("nAmerika_4");
 		nAmerika_4.setForeground(Color.WHITE);
 		nAmerika_4.setHorizontalTextPosition(JLabel.CENTER);
 		nAmerika_4.setVerticalTextPosition(JLabel.CENTER);
 		nAmerika_8.setBounds(198, 48, 200, 200);
 		nAmerika_8.setText("8");
-		nAmerika_8.addMouseListener(upDown);
 		nAmerika_8.setName("nAmerika_8");
 		nAmerika_8.setForeground(Color.WHITE);
 		nAmerika_8.setHorizontalTextPosition(JLabel.CENTER);
 		nAmerika_8.setVerticalTextPosition(JLabel.CENTER);
 		nAmerika_3.setBounds(58, 160, 200, 200);
 		nAmerika_3.setText("3");
-		nAmerika_3.addMouseListener(upDown);
 		nAmerika_3.setName("nAmerika_3");
 		nAmerika_3.setForeground(Color.WHITE);
 		nAmerika_3.setHorizontalTextPosition(JLabel.CENTER);
 		nAmerika_3.setVerticalTextPosition(JLabel.CENTER);
 		nAmerika_5.setBounds(260, 0, 200, 200);
 		nAmerika_5.setText("5");
-		nAmerika_5.addMouseListener(upDown);
 		nAmerika_5.setName("nAmerika_5");
 		nAmerika_5.setForeground(Color.WHITE);
 		nAmerika_5.setHorizontalTextPosition(JLabel.CENTER);
@@ -314,7 +276,6 @@ public class gui {
 	    
 	    sAmerika_4.setBounds(158, 238, 200, 200);
 		sAmerika_4.setText("4");
-		sAmerika_4.addMouseListener(upDown);
 		sAmerika_4.setName("sAmerika_4");
 		sAmerika_4.setForeground(Color.WHITE);
 		sAmerika_4.setHorizontalTextPosition(JLabel.CENTER);
@@ -323,14 +284,12 @@ public class gui {
 		sAmerika_3.setBounds(147, 346, 200, 100);
 		sAmerika_3.setText("3");
 		sAmerika_3.setName("sAmerika_3");
-		sAmerika_3.addMouseListener(upDown);
 		sAmerika_3.setForeground(Color.WHITE);
 		sAmerika_3.setHorizontalTextPosition(JLabel.CENTER);
 		sAmerika_3.setVerticalTextPosition(JLabel.CENTER);
 		
 		sAmerika_2.setBounds(122, 304, 300, 200);
 		sAmerika_2.setText("2");
-		sAmerika_2.addMouseListener(upDown);
 		sAmerika_2.setName("sAmerika_2");
 		sAmerika_2.setForeground(Color.WHITE);
 		sAmerika_2.setHorizontalTextPosition(JLabel.CENTER);
@@ -339,7 +298,6 @@ public class gui {
 		sAmerika_1.setBounds(130, 380, 200, 200);
 		sAmerika_1.setText("1");
 		sAmerika_1.setName("sAmerika_1");
-		sAmerika_1.addMouseListener(upDown);
 		sAmerika_1.setForeground(Color.WHITE);
 		sAmerika_1.setHorizontalTextPosition(JLabel.CENTER);
 		sAmerika_1.setVerticalTextPosition(JLabel.CENTER);
@@ -352,48 +310,41 @@ public class gui {
 	    europa_2.setBounds(350, 70, 200, 100);
 		europa_2.setText("2");
 		europa_2.setName("europa_2");
-		europa_2.addMouseListener(upDown);
 		europa_2.setForeground(Color.WHITE);
 		europa_2.setHorizontalTextPosition(JLabel.CENTER);
 		europa_2.setVerticalTextPosition(JLabel.CENTER);		
 		europa_1.setBounds(370, 70, 200, 200);
 		europa_1.setText("1");
-		europa_1.addMouseListener(upDown);
 		europa_1.setName("europa_1");
 		europa_1.setForeground(Color.WHITE);
 		europa_1.setHorizontalTextPosition(JLabel.CENTER);
 		europa_1.setVerticalTextPosition(JLabel.CENTER);	
 		europa_7.setBounds(380, 110, 200, 200);
 		europa_7.setText("7");
-		europa_7.addMouseListener(upDown);
 		europa_7.setName("europa_7");
 		europa_7.setForeground(Color.WHITE);
 		europa_7.setHorizontalTextPosition(JLabel.CENTER);
 		europa_7.setVerticalTextPosition(JLabel.CENTER);	
 		europa_3.setBounds(418, 87, 300, 200);
 		europa_3.setText("3");
-		europa_3.addMouseListener(upDown);
 		europa_3.setName("europa_3");
 		europa_3.setForeground(Color.WHITE);
 		europa_3.setHorizontalTextPosition(JLabel.CENTER);
 		europa_3.setVerticalTextPosition(JLabel.CENTER);	
 		europa_5.setBounds(435, 116, 200, 200);
 		europa_5.setText("5");
-		europa_5.addMouseListener(upDown);
 		europa_5.setName("europa_5");
 		europa_5.setForeground(Color.WHITE);
 		europa_5.setHorizontalTextPosition(JLabel.CENTER);
 		europa_5.setVerticalTextPosition(JLabel.CENTER);	
 		europa_6.setBounds(470, 30, 300, 300);		
 		europa_6.setText("6");
-		europa_6.addMouseListener(upDown);
 		europa_6.setName("europa_6");
 		europa_6.setForeground(Color.WHITE);
 		europa_6.setHorizontalTextPosition(JLabel.CENTER);
 		europa_6.setVerticalTextPosition(JLabel.CENTER);	
 		europa_4.setBounds(430, 45, 200, 200);
 		europa_4.setText("4");
-		europa_4.addMouseListener(upDown);
 		europa_4.setName("europa_4");
 		europa_4.setForeground(Color.WHITE);
 		europa_4.setHorizontalTextPosition(JLabel.CENTER);
@@ -410,20 +361,17 @@ public class gui {
 	    afrika_5.setBounds(320, 210, 200, 200);
 		afrika_5.setText("5");
 		afrika_5.setName("afrika_5");
-		afrika_5.addMouseListener(upDown);
 		afrika_5.setForeground(Color.WHITE);
 		afrika_5.setHorizontalTextPosition(JLabel.CENTER);
 		afrika_5.setVerticalTextPosition(JLabel.CENTER);
 		afrika_3.setBounds(457, 190, 200, 200);		
 		afrika_3.setText("3");
 		afrika_3.setName("afrika_3");
-		afrika_3.addMouseListener(upDown);
 		afrika_3.setForeground(Color.WHITE);
 		afrika_3.setHorizontalTextPosition(JLabel.CENTER);
 		afrika_3.setVerticalTextPosition(JLabel.CENTER);
 		afrika_2.setBounds(480, 270, 200, 200);		
 		afrika_2.setText("10");
-		afrika_2.addMouseListener(upDown);
 		afrika_2.setName("afrika_2");
 		afrika_2.setForeground(Color.WHITE);
 		afrika_2.setHorizontalTextPosition(JLabel.CENTER);
@@ -434,16 +382,13 @@ public class gui {
 		afrika_1.setForeground(Color.WHITE);
 		afrika_1.setHorizontalTextPosition(JLabel.CENTER);
 		afrika_1.setVerticalTextPosition(JLabel.CENTER);
-		afrika_1.addMouseListener(upDown);
 		afrika_6.setBounds(450, 291, 300, 300);	
 		afrika_6.setText("6");
 		afrika_6.setName("afrika_6");
 		afrika_6.setForeground(Color.WHITE);
 		afrika_6.setHorizontalTextPosition(JLabel.CENTER);
 		afrika_6.setVerticalTextPosition(JLabel.CENTER);
-		afrika_6.addMouseListener(upDown);
 		afrika_4.setBounds(560, 320, 300, 200);
-		afrika_4.addMouseListener(upDown);
 		afrika_4.setText("4");
 		afrika_4.setName("afrika_4");
 		afrika_4.setForeground(Color.WHITE);
@@ -460,27 +405,23 @@ public class gui {
 	    asien_7.setBounds(497, 177, 200, 200);
 		asien_7.setText("7");
 		asien_7.setName("asien_7");
-		asien_7.addMouseListener(upDown);
 		asien_7.setForeground(Color.WHITE);
 		asien_7.setHorizontalTextPosition(JLabel.CENTER);
 		asien_7.setVerticalTextPosition(JLabel.CENTER);
 		asien_1.setBounds(555, 107, 200, 200);
 		asien_1.setText("1");
-		asien_1.addMouseListener(upDown);
 		asien_1.setName("asien_1");
 		asien_1.setForeground(Color.WHITE);
 		asien_1.setHorizontalTextPosition(JLabel.CENTER);
 		asien_1.setVerticalTextPosition(JLabel.CENTER);
 		asien_11.setBounds(550, 15, 300, 300);	
 		asien_11.setText("11");
-		asien_11.addMouseListener(upDown);
 		asien_11.setName("asien_11");
 		asien_11.setForeground(Color.WHITE);
 		asien_11.setHorizontalTextPosition(JLabel.CENTER);
 		asien_11.setVerticalTextPosition(JLabel.CENTER);
 		asien_10.setBounds(583, 105, 200, 100);			
 		asien_10.setText("10");
-		asien_10.addMouseListener(upDown);
 		asien_10.setName("asien_10");
 		asien_10.setForeground(Color.WHITE);
 		asien_10.setHorizontalTextPosition(JLabel.CENTER);
@@ -488,41 +429,35 @@ public class gui {
 		asien_3.setBounds(603, 190, 200, 200);		
 		asien_3.setText("3");
 		asien_3.setName("asien_3");
-		asien_3.addMouseListener(upDown);
 		asien_3.setForeground(Color.WHITE);
 		asien_3.setHorizontalTextPosition(JLabel.CENTER);
 		asien_3.setVerticalTextPosition(JLabel.CENTER);
 		asien_2.setBounds(633, 148, 200, 200);
 		asien_2.setText("2");
 		asien_2.setName("asien_2");
-		asien_2.addMouseListener(upDown);
 		asien_2.setForeground(Color.WHITE);
 		asien_2.setHorizontalTextPosition(JLabel.CENTER);
 		asien_2.setVerticalTextPosition(JLabel.CENTER);
 		asien_8.setBounds(655, 120, 200, 200);		
 		asien_8.setText("8");
-		asien_8.addMouseListener(upDown);
 		asien_8.setName("asien_8");
 		asien_8.setForeground(Color.WHITE);
 		asien_8.setHorizontalTextPosition(JLabel.CENTER);
 		asien_8.setVerticalTextPosition(JLabel.CENTER);
 		asien_4.setBounds(660, 128, 200, 100);
 		asien_4.setText("4");
-		asien_4.addMouseListener(upDown);
 		asien_4.setName("asien_4");
 		asien_4.setForeground(Color.WHITE);
 		asien_4.setHorizontalTextPosition(JLabel.CENTER);
 		asien_4.setVerticalTextPosition(JLabel.CENTER);
 		asien_12.setBounds(670, 50, 300, 200);
 		asien_12.setText("12");
-		asien_12.addMouseListener(upDown);
 		asien_12.setName("asien_12");
 		asien_12.setForeground(Color.WHITE);
 		asien_12.setHorizontalTextPosition(JLabel.CENTER);
 		asien_12.setVerticalTextPosition(JLabel.CENTER);
 		asien_6.setBounds(760, 80, 300, 200);			
 		asien_6.setText("6");
-		asien_6.addMouseListener(upDown);
 		asien_6.setName("asien_6");
 		asien_6.setForeground(Color.WHITE);
 		asien_6.setHorizontalTextPosition(JLabel.CENTER);
@@ -530,13 +465,11 @@ public class gui {
 		asien_5.setBounds(790, 100, 300, 300);			
 		asien_5.setText("5");
 		asien_5.setName("asien_5");
-		asien_5.addMouseListener(upDown);
 		asien_5.setForeground(Color.WHITE);
 		asien_5.setHorizontalTextPosition(JLabel.CENTER);
 		asien_5.setVerticalTextPosition(JLabel.CENTER);
 		asien_9.setBounds(707, 220, 200, 200);	
 		asien_9.setText("9");
-		asien_9.addMouseListener(upDown);
 		asien_9.setName("asien_9");
 		asien_9.setForeground(Color.WHITE);
 		asien_9.setHorizontalTextPosition(JLabel.CENTER);
@@ -558,28 +491,24 @@ public class gui {
 	    
 	    australien_2.setBounds(682, 265, 200, 200);
 		australien_2.setText("2");
-		australien_2.addMouseListener(upDown);
 		australien_2.setName("australien_2");
 		australien_2.setForeground(Color.WHITE);
 		australien_2.setHorizontalTextPosition(JLabel.CENTER);
 		australien_2.setVerticalTextPosition(JLabel.CENTER);
 	    australien_3.setBounds(800, 345, 200, 100);
 	    australien_3.setText("3");
-	    australien_3.addMouseListener(upDown);
 	    australien_3.setName("australien_3");
 	    australien_3.setForeground(Color.WHITE);
 	    australien_3.setHorizontalTextPosition(JLabel.CENTER);
 	    australien_3.setVerticalTextPosition(JLabel.CENTER);
 		australien_1.setBounds(815, 425, 100, 100);
 		australien_1.setText("1");
-		australien_1.addMouseListener(upDown);
 		australien_1.setName("australien_1");
 		australien_1.setForeground(Color.WHITE);
 		australien_1.setHorizontalTextPosition(JLabel.CENTER);
 		australien_1.setVerticalTextPosition(JLabel.CENTER);
 	    australien_4.setBounds(772, 425, 100, 100);
 	    australien_4.setText("4");
-	    australien_4.addMouseListener(upDown);
 	    australien_4.setName("australien_4");
 	    australien_4.setForeground(Color.WHITE);
 	    australien_4.setHorizontalTextPosition(JLabel.CENTER);
