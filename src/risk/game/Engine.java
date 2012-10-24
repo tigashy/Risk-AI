@@ -273,6 +273,63 @@ public class Engine {
 		asia.getCountry(5).setNeighbor(asia.getCountry(7), 2);
 		asia.getCountry(5).setNeighbor(asia.getCountry(11), 3);
 		asia.getCountry(5).setNeighbor(northAmerica.getCountry(0), 4);
+		
+		/* Setting neighbors for Middle East */
+		asia.getCountry(6).setNeighbor(asia.getCountry(0), 0);
+		asia.getCountry(6).setNeighbor(asia.getCountry(2), 1);
+		asia.getCountry(6).setNeighbor(europe.getCountry(4), 2);
+		asia.getCountry(6).setNeighbor(europe.getCountry(5), 3);
+		asia.getCountry(6).setNeighbor(africa.getCountry(1), 4);
+		asia.getCountry(6).setNeighbor(africa.getCountry(2), 5);
+		
+		/* Setting neighbors for Mongolia */
+		asia.getCountry(7).setNeighbor(asia.getCountry(1), 0);
+		asia.getCountry(7).setNeighbor(asia.getCountry(3), 1);
+		asia.getCountry(7).setNeighbor(asia.getCountry(4), 2);
+		asia.getCountry(7).setNeighbor(asia.getCountry(5), 3);
+		asia.getCountry(7).setNeighbor(asia.getCountry(9), 4);
+		
+		/* Setting neighbors for Siam */
+		asia.getCountry(8).setNeighbor(asia.getCountry(1), 0);
+		asia.getCountry(8).setNeighbor(asia.getCountry(2), 1);
+		asia.getCountry(8).setNeighbor(australia.getCountry(1), 2);
+		
+		/* Setting neighbors for Siberia */
+		asia.getCountry(9).setNeighbor(asia.getCountry(1), 0);
+		asia.getCountry(9).setNeighbor(asia.getCountry(3), 1);
+		asia.getCountry(9).setNeighbor(asia.getCountry(7), 2);
+		asia.getCountry(9).setNeighbor(asia.getCountry(10), 3);
+		asia.getCountry(9).setNeighbor(asia.getCountry(11), 4);
+		
+		/* Setting neighbors for Ural */
+		asia.getCountry(10).setNeighbor(asia.getCountry(0), 0);
+		asia.getCountry(10).setNeighbor(asia.getCountry(1), 1);
+		asia.getCountry(10).setNeighbor(asia.getCountry(9), 2);
+		asia.getCountry(10).setNeighbor(europe.getCountry(5), 3);
+		
+		/* Setting neighbors for Yakutsk */
+		asia.getCountry(11).setNeighbor(asia.getCountry(3), 0);
+		asia.getCountry(11).setNeighbor(asia.getCountry(5), 1);
+		asia.getCountry(11).setNeighbor(asia.getCountry(9), 2);
+		
+		/* Setting neighbors for Eastern Australia */
+		australia.getCountry(0).setNeighbor(australia.getCountry(2), 0);
+		australia.getCountry(0).setNeighbor(australia.getCountry(3), 1);
+		
+		/* Setting neighbors for Indonesia */
+		australia.getCountry(1).setNeighbor(australia.getCountry(2), 0);
+		australia.getCountry(1).setNeighbor(australia.getCountry(3), 1);
+		australia.getCountry(1).setNeighbor(asia.getCountry(8), 2);
+		
+		/* Setting neighbors for New Guinea */
+		australia.getCountry(2).setNeighbor(australia.getCountry(0), 0);
+		australia.getCountry(2).setNeighbor(australia.getCountry(1), 1);
+		australia.getCountry(2).setNeighbor(australia.getCountry(3), 2);
+		
+		/* Setting neighbors for Western Australia */
+		australia.getCountry(3).setNeighbor(australia.getCountry(0), 0);
+		australia.getCountry(3).setNeighbor(australia.getCountry(1), 1);
+		australia.getCountry(3).setNeighbor(australia.getCountry(2), 2);
 	}
 	
 	private void initGameCards() {
