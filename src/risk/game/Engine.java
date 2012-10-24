@@ -165,6 +165,41 @@ public class Engine {
 		europe.getCountry(1).setNeighbor(europe.getCountry(0), 0);
 		europe.getCountry(1).setNeighbor(europe.getCountry(3), 1);
 		europe.getCountry(1).setNeighbor(northAmerica.getCountry(4), 2);
+		
+		/* Setting neighbors for Northern Europe */
+		europe.getCountry(2).setNeighbor(europe.getCountry(0), 0);
+		europe.getCountry(2).setNeighbor(europe.getCountry(3), 1);
+		europe.getCountry(2).setNeighbor(europe.getCountry(4), 2);
+		europe.getCountry(2).setNeighbor(europe.getCountry(5), 3);
+		europe.getCountry(2).setNeighbor(europe.getCountry(6), 4);
+		
+		/* Setting neighbors for Scandinavia */
+		europe.getCountry(3).setNeighbor(europe.getCountry(0), 0);
+		europe.getCountry(3).setNeighbor(europe.getCountry(1), 1);
+		europe.getCountry(3).setNeighbor(europe.getCountry(2), 2);
+		europe.getCountry(3).setNeighbor(europe.getCountry(5), 3);
+		
+		/* Setting neighbors for Southern Europe */
+		europe.getCountry(4).setNeighbor(europe.getCountry(2), 0);
+		europe.getCountry(4).setNeighbor(europe.getCountry(5), 1);
+		europe.getCountry(4).setNeighbor(europe.getCountry(6), 2);
+		europe.getCountry(4).setNeighbor(asia.getCountry(6), 3);
+		europe.getCountry(4).setNeighbor(africa.getCountry(2), 4);
+		europe.getCountry(4).setNeighbor(africa.getCountry(4), 5);
+		
+		/* Setting neighbors for Ukraine */
+		europe.getCountry(5).setNeighbor(europe.getCountry(2), 0);
+		europe.getCountry(5).setNeighbor(europe.getCountry(3), 1);
+		europe.getCountry(5).setNeighbor(europe.getCountry(4), 2);
+		europe.getCountry(5).setNeighbor(asia.getCountry(0), 3);
+		europe.getCountry(5).setNeighbor(asia.getCountry(6), 4);
+		europe.getCountry(5).setNeighbor(asia.getCountry(10), 5);
+		
+		/* Setting neighbors for Western Europe */
+		europe.getCountry(3).setNeighbor(europe.getCountry(0), 0);
+		europe.getCountry(3).setNeighbor(europe.getCountry(2), 1);
+		europe.getCountry(3).setNeighbor(europe.getCountry(4), 2);
+		europe.getCountry(3).setNeighbor(africa.getCountry(4), 3);
 	}
 	
 	private void initGameCards() {
