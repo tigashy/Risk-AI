@@ -154,6 +154,17 @@ public class Engine {
 		southAmerica.getCountry(3).setNeighbor(southAmerica.getCountry(1), 0);
 		southAmerica.getCountry(3).setNeighbor(southAmerica.getCountry(2), 1);
 		southAmerica.getCountry(3).setNeighbor(northAmerica.getCountry(2), 2);
+		
+		/* Setting neighbors for Great Britain */
+		europe.getCountry(0).setNeighbor(europe.getCountry(1), 0);
+		europe.getCountry(0).setNeighbor(europe.getCountry(2), 1);
+		europe.getCountry(0).setNeighbor(europe.getCountry(3), 2);
+		europe.getCountry(0).setNeighbor(europe.getCountry(6), 3);
+		
+		/* Setting neighbors for Iceland */
+		europe.getCountry(1).setNeighbor(europe.getCountry(0), 0);
+		europe.getCountry(1).setNeighbor(europe.getCountry(3), 1);
+		europe.getCountry(1).setNeighbor(northAmerica.getCountry(4), 2);
 	}
 	
 	private void initGameCards() {
