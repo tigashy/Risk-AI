@@ -23,10 +23,12 @@ public class Country {
 		this.name = name;
 		this.numberOfArmies = 0;
 		this.continent = continent;
+		this.label = new ImageLabel();
 		this.label.setBounds(x, y, width, height);
-		label.setForeground(Color.WHITE);
-		label.setHorizontalTextPosition(JLabel.CENTER);
-		label.setVerticalTextPosition(JLabel.CENTER);
+		this.label.setForeground(Color.WHITE);
+		this.label.setHorizontalTextPosition(JLabel.CENTER);
+		this.label.setVerticalTextPosition(JLabel.CENTER);
+		this.label.setText(nameLabel);
 	}
 	
 	public void setNeighbor(Country neighbor, int position) {
