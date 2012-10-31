@@ -1,6 +1,6 @@
 package risk.game;
 
-public enum Color {
+public enum PlayerColor {
 	BLUE ("blau"),
 	RED ("rot"),
 	GREEN ("gruen"),
@@ -10,7 +10,7 @@ public enum Color {
 	
 	private final String fileColor;
 	
-	Color(String fileColor) {
+	PlayerColor(String fileColor) {
 		this.fileColor = fileColor;
 	}
 	public String getFileColor() {

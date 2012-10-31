@@ -2,6 +2,7 @@ package risk.game;
 
 import java.awt.Color;
 
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 import risk.gui.ImageLabel;
@@ -21,7 +22,7 @@ public class Country {
 		this.continentBorder = continentBorder;
 		this.neighbors = new Country[numberOfNeighbors];
 		this.name = name;
-		this.numberOfArmies = 0;
+		this.numberOfArmies = 1;
 		this.continent = continent;
 		this.label = new ImageLabel();
 		this.label.setBounds(x, y, width, height);
@@ -29,6 +30,7 @@ public class Country {
 		this.label.setHorizontalTextPosition(JLabel.CENTER);
 		this.label.setVerticalTextPosition(JLabel.CENTER);
 		this.label.setName(nameLabel);
+		this.label.setText("1");
 	}
 	
 	public void setNeighbor(Country neighbor, int position) {
@@ -71,5 +73,9 @@ public class Country {
 	
 	public ImageLabel getLabel() {
 		return this.label;
+	}
+	public void setColor(PlayerColor c, int number) {
+		//String filePath = "Images/" + this.continent.toString() + "/" + number + "/" + c.getFileColor()));
+		label.setIcon(new ImageIcon("Images/" + this.continent.toString() + "/" + number + "/" + c.getFileColor() + ".gif"));
 	}
 }

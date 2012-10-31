@@ -23,19 +23,55 @@ public class Engine {
 		initCountries();
 		initGameCards();
 	}
-	
-	private void initPlayers() {
-		System.out.println("test");
-		playerList = new Player[gui.getPlayerCount()];
-		for (int i = 0; i < playerList.length; i++) {
-			playerList[i] = new Player(Color.values()[i]);
-			System.out.println(playerList[i].getColor().getFileColor());
-		}
-	}
 
 	public void run() {
 		initPlayers();
 		
+	}
+	
+	private void initPlayers() {
+		playerList = new Player[gui.getPlayerCount()];
+		for (int i = 0; i < playerList.length; i++) {
+			playerList[i] = new Player(PlayerColor.values()[i]);
+			System.out.println(playerList[i].getColor().getFileColor());
+		}
+		int i = 0;
+		for (int j = 0; j < northAmerica.getCountries().length; j++) {
+			Player tmp = playerList[i % playerList.length];
+			tmp.addCountry(northAmerica.getCountry(j));
+			northAmerica.getCountry(j).setColor(tmp.getColor(), j + 1);
+			i++;
+		}
+		for (int j = 0; j < southAmerica.getCountries().length; j++) {
+			Player tmp = playerList[i % playerList.length];
+			tmp.addCountry(southAmerica.getCountry(j));
+			southAmerica.getCountry(j).setColor(tmp.getColor(), j + 1);
+			i++;
+		}
+		for (int j = 0; j < europe.getCountries().length; j++) {
+			Player tmp = playerList[i % playerList.length];
+			tmp.addCountry(europe.getCountry(j));
+			europe.getCountry(j).setColor(tmp.getColor(), j + 1);
+			i++;
+		}
+		for (int j = 0; j < africa.getCountries().length; j++) {
+			Player tmp = playerList[i % playerList.length];
+			tmp.addCountry(africa.getCountry(j));
+			africa.getCountry(j).setColor(tmp.getColor(), j + 1);
+			i++;
+		}
+		for (int j = 0; j < asia.getCountries().length; j++) {
+			Player tmp = playerList[i % playerList.length];
+			tmp.addCountry(asia.getCountry(j));
+			asia.getCountry(j).setColor(tmp.getColor(), j + 1);
+			i++;
+		}
+		for (int j = 0; j < australia.getCountries().length; j++) {
+			Player tmp = playerList[i % playerList.length];
+			tmp.addCountry(australia.getCountry(j));
+			australia.getCountry(j).setColor(tmp.getColor(), j + 1);
+			i++;
+		}
 	}
 
 	private void initCountries() {
