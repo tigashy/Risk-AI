@@ -267,15 +267,15 @@ public class gui {
 //		nAmerika_5.setVerticalTextPosition(JLabel.CENTER);
 		
 		
-	    pnlGame.add(nAmerika_1);    
-	    pnlGame.add(nAmerika_2);
-	    pnlGame.add(nAmerika_3);
-	    pnlGame.add(nAmerika_4);
-	    pnlGame.add(nAmerika_5);
-	    pnlGame.add(nAmerika_6);
-	    pnlGame.add(nAmerika_7);
-	    pnlGame.add(nAmerika_8);
-	    pnlGame.add(nAmerika_9);
+//	    pnlGame.add(nAmerika_1);    
+//	    pnlGame.add(nAmerika_2);
+//	    pnlGame.add(nAmerika_3);
+//	    pnlGame.add(nAmerika_4);
+//	    pnlGame.add(nAmerika_5);
+//	    pnlGame.add(nAmerika_6);
+//	    pnlGame.add(nAmerika_7);
+//	    pnlGame.add(nAmerika_8);
+//	    pnlGame.add(nAmerika_9);
 	    
 //	    sAmerika_4.setBounds(158, 238, 200, 200);
 //		sAmerika_4.setText("4");
@@ -305,10 +305,10 @@ public class gui {
 //		sAmerika_1.setHorizontalTextPosition(JLabel.CENTER);
 //		sAmerika_1.setVerticalTextPosition(JLabel.CENTER);
 				
-		pnlGame.add(sAmerika_1);
-	    pnlGame.add(sAmerika_2);
-	    pnlGame.add(sAmerika_3);
-	    pnlGame.add(sAmerika_4);
+//		pnlGame.add(sAmerika_1);
+//	    pnlGame.add(sAmerika_2);
+//	    pnlGame.add(sAmerika_3);
+//	    pnlGame.add(sAmerika_4);
 	    
 //	    europa_2.setBounds(350, 70, 200, 100);
 //		europa_2.setText("2");
@@ -353,13 +353,13 @@ public class gui {
 //		europa_4.setHorizontalTextPosition(JLabel.CENTER);
 //		europa_4.setVerticalTextPosition(JLabel.CENTER);	
 		
-		pnlGame.add(europa_1);
-	    pnlGame.add(europa_2);
-	    pnlGame.add(europa_3);
-	    pnlGame.add(europa_4);
-	    pnlGame.add(europa_5);
-	    pnlGame.add(europa_6);
-	    pnlGame.add(europa_7);
+//		pnlGame.add(europa_1);
+//	    pnlGame.add(europa_2);
+//	    pnlGame.add(europa_3);
+//	    pnlGame.add(europa_4);
+//	    pnlGame.add(europa_5);
+//	    pnlGame.add(europa_6);
+//	    pnlGame.add(europa_7);
 	    
 //	    afrika_5.setBounds(320, 210, 200, 200);
 //		afrika_5.setText("5");
@@ -398,12 +398,12 @@ public class gui {
 //		afrika_4.setHorizontalTextPosition(JLabel.CENTER);
 //		afrika_4.setVerticalTextPosition(JLabel.CENTER);
 		
-		pnlGame.add(afrika_1);
-	    pnlGame.add(afrika_2);
-	    pnlGame.add(afrika_3);
-	    pnlGame.add(afrika_4);
-	    pnlGame.add(afrika_5);
-	    pnlGame.add(afrika_6);
+//		pnlGame.add(afrika_1);
+//	    pnlGame.add(afrika_2);
+//	    pnlGame.add(afrika_3);
+//	    pnlGame.add(afrika_4);
+//	    pnlGame.add(afrika_5);
+//	    pnlGame.add(afrika_6);
 	    
 //	    asien_7.setBounds(497, 177, 200, 200);
 //		asien_7.setText("7");
@@ -479,18 +479,18 @@ public class gui {
 //		asien_9.setVerticalTextPosition(JLabel.CENTER);
 		
 		
-		pnlGame.add(asien_1);
-	    pnlGame.add(asien_2);
-	    pnlGame.add(asien_3);
-	    pnlGame.add(asien_4);
-	    pnlGame.add(asien_5);
-	    pnlGame.add(asien_6);
-	    pnlGame.add(asien_7);
-	    pnlGame.add(asien_8);
-	    pnlGame.add(asien_9);
-	    pnlGame.add(asien_10);
-	    pnlGame.add(asien_11);
-	    pnlGame.add(asien_12);
+//		pnlGame.add(asien_1);
+//	    pnlGame.add(asien_2);
+//	    pnlGame.add(asien_3);
+//	    pnlGame.add(asien_4);
+//	    pnlGame.add(asien_5);
+//	    pnlGame.add(asien_6);
+//	    pnlGame.add(asien_7);
+//	    pnlGame.add(asien_8);
+//	    pnlGame.add(asien_9);
+//	    pnlGame.add(asien_10);
+//	    pnlGame.add(asien_11);
+//	    pnlGame.add(asien_12);
 	    
 //	    australien_2.setBounds(682, 265, 200, 200);
 //		australien_2.setText("2");
@@ -517,10 +517,10 @@ public class gui {
 //	    australien_4.setHorizontalTextPosition(JLabel.CENTER);
 //	    australien_4.setVerticalTextPosition(JLabel.CENTER);
 	    
-	    pnlGame.add(australien_1);
-	    pnlGame.add(australien_2);
-	    pnlGame.add(australien_3);
-	    pnlGame.add(australien_4);
+//	    pnlGame.add(australien_1);
+//	    pnlGame.add(australien_2);
+//	    pnlGame.add(australien_3);
+//	    pnlGame.add(australien_4);
 	}
 	
 
@@ -632,7 +632,6 @@ public class gui {
 				pnlMenue.setVisible(false);				
 				Game();
 				System.out.println();
-				inizialGame();
 				
 			}
 		});
@@ -640,57 +639,57 @@ public class gui {
 	
 	
 	
-	public void inizialGame()
-	{
-		SetNewColor(nAmerika_1, "1", "rot");
-		SetNewColor(nAmerika_2, "1", "blau");
-		SetNewColor(nAmerika_3, "1", "tk");
-		SetNewColor(nAmerika_4, "1", "gruen");
-		SetNewColor(nAmerika_5, "1", "gelb");
-		SetNewColor(nAmerika_6, "1", "gruen");
-		SetNewColor(nAmerika_7, "1", "gelb");
-		SetNewColor(nAmerika_8, "1", "tk");
-		SetNewColor(nAmerika_9, "1", "lila");
-		
-		SetNewColor(sAmerika_1, "1", "blau");
-		SetNewColor(sAmerika_2, "1", "gruen");
-		SetNewColor(sAmerika_3, "1", "lila");
-		SetNewColor(sAmerika_4, "1", "tk");
-		
-		SetNewColor(afrika_1, "1", "tk");
-		SetNewColor(afrika_2, "1", "blau");
-		SetNewColor(afrika_3, "1", "lila");
-		SetNewColor(afrika_4, "1", "gruen");
-		SetNewColor(afrika_5, "1", "rot");
-		SetNewColor(afrika_6, "1", "gelb");
-		
-		SetNewColor(europa_1, "1", "gelb");
-		SetNewColor(europa_2, "1", "gruen");
-		SetNewColor(europa_3, "1", "blau");
-		SetNewColor(europa_4, "1", "tk");
-		SetNewColor(europa_5, "1", "lila");
-		SetNewColor(europa_6, "1", "rot");
-		SetNewColor(europa_7, "1", "gelb");
-		
-		SetNewColor(asien_1, "1", "gelb");
-		SetNewColor(asien_2, "1", "blau");
-		SetNewColor(asien_3, "1", "lila");
-		SetNewColor(asien_4, "1", "gruen");
-		SetNewColor(asien_5, "1", "tk");
-		SetNewColor(asien_6, "1", "rot");
-		SetNewColor(asien_7, "1", "gelb");
-		SetNewColor(asien_8, "1", "gruen");
-		SetNewColor(asien_9, "1", "blau");
-		SetNewColor(asien_10, "1", "tk");
-		SetNewColor(asien_11, "1", "rot");
-		SetNewColor(asien_12, "1", "lila");
-		
-
-		SetNewColor(australien_1, "1", "lila");
-		SetNewColor(australien_2, "1", "gelb");
-		SetNewColor(australien_3, "1", "gruen");
-		SetNewColor(australien_4, "1", "blau");
-	}
+//	public void inizialGame()
+//	{
+//		SetNewColor(nAmerika_1, "1", "rot");
+//		SetNewColor(nAmerika_2, "1", "blau");
+//		SetNewColor(nAmerika_3, "1", "tk");
+//		SetNewColor(nAmerika_4, "1", "gruen");
+//		SetNewColor(nAmerika_5, "1", "gelb");
+//		SetNewColor(nAmerika_6, "1", "gruen");
+//		SetNewColor(nAmerika_7, "1", "gelb");
+//		SetNewColor(nAmerika_8, "1", "tk");
+//		SetNewColor(nAmerika_9, "1", "lila");
+//		
+//		SetNewColor(sAmerika_1, "1", "blau");
+//		SetNewColor(sAmerika_2, "1", "gruen");
+//		SetNewColor(sAmerika_3, "1", "lila");
+//		SetNewColor(sAmerika_4, "1", "tk");
+//		
+//		SetNewColor(afrika_1, "1", "tk");
+//		SetNewColor(afrika_2, "1", "blau");
+//		SetNewColor(afrika_3, "1", "lila");
+//		SetNewColor(afrika_4, "1", "gruen");
+//		SetNewColor(afrika_5, "1", "rot");
+//		SetNewColor(afrika_6, "1", "gelb");
+//		
+//		SetNewColor(europa_1, "1", "gelb");
+//		SetNewColor(europa_2, "1", "gruen");
+//		SetNewColor(europa_3, "1", "blau");
+//		SetNewColor(europa_4, "1", "tk");
+//		SetNewColor(europa_5, "1", "lila");
+//		SetNewColor(europa_6, "1", "rot");
+//		SetNewColor(europa_7, "1", "gelb");
+//		
+//		SetNewColor(asien_1, "1", "gelb");
+//		SetNewColor(asien_2, "1", "blau");
+//		SetNewColor(asien_3, "1", "lila");
+//		SetNewColor(asien_4, "1", "gruen");
+//		SetNewColor(asien_5, "1", "tk");
+//		SetNewColor(asien_6, "1", "rot");
+//		SetNewColor(asien_7, "1", "gelb");
+//		SetNewColor(asien_8, "1", "gruen");
+//		SetNewColor(asien_9, "1", "blau");
+//		SetNewColor(asien_10, "1", "tk");
+//		SetNewColor(asien_11, "1", "rot");
+//		SetNewColor(asien_12, "1", "lila");
+//		
+//
+//		SetNewColor(australien_1, "1", "lila");
+//		SetNewColor(australien_2, "1", "gelb");
+//		SetNewColor(australien_3, "1", "gruen");
+//		SetNewColor(australien_4, "1", "blau");
+//	}
 	
 }
 
