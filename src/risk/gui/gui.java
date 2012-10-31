@@ -21,6 +21,7 @@ import javax.swing.JRadioButton;
 
 
 public class gui {
+	private int playerCount;
 	private JFrame frame = new JFrame();
 	private JRadioButton rb1Computer = new JRadioButton("1");
 	private JRadioButton rb2Computer = new JRadioButton("2");
@@ -62,6 +63,10 @@ public class gui {
 	
 	public JPanel getPnlGame(){
 		return this.pnlGame;
+	}
+	
+	public int getPlayerCount(){
+		return this.playerCount;
 	}
 	
 	/*
@@ -628,6 +633,7 @@ public class gui {
 		btnPlay.addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
+				playerCount = Integer.parseInt(groupComputer.getSelection().getActionCommand());
 				//Spiel inizialisieren neue pnlmain machen
 				pnlMenue.setVisible(false);				
 				Game();
