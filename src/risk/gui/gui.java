@@ -692,10 +692,6 @@ public class gui {
 		SetNewColor(australien_4, "1", "blau");
 	}
 	
-	public static void main(String args[])
-	{ 
-		gui gui = new gui();
-	 }
 }
 
 
