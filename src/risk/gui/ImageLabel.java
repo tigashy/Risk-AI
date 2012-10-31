@@ -3,7 +3,7 @@ package risk.gui;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-class ImageLabel extends JLabel {
+public class ImageLabel extends JLabel {
 
 	  public ImageLabel(String img) {
 	    this(new ImageIcon(img));
