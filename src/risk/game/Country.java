@@ -28,7 +28,7 @@ public class Country {
 		this.label.setForeground(Color.WHITE);
 		this.label.setHorizontalTextPosition(JLabel.CENTER);
 		this.label.setVerticalTextPosition(JLabel.CENTER);
-		this.label.setText(nameLabel);
+		this.label.setName(nameLabel);
 	}
 	
 	public void setNeighbor(Country neighbor, int position) {
