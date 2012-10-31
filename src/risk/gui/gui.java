@@ -23,7 +23,6 @@ import risk.Main;
 public class gui {
 	private int playerCount;
 	private JFrame frame = new JFrame();
-	private JRadioButton rb1Computer = new JRadioButton("1");
 	private JRadioButton rb2Computer = new JRadioButton("2");
 	private JRadioButton rb3Computer = new JRadioButton("3");
 	private JRadioButton rb4Computer = new JRadioButton("4");
@@ -562,11 +561,7 @@ public class gui {
 		
 		pnlMenue.setLayout(new GridBagLayout());	
 		
-		
-		
-		groupComputer.add( rb1Computer );
-		rb1Computer.setActionCommand("1");
-		rb1Computer.setSelected(true);
+	
 		groupComputer.add( rb2Computer );
 		rb2Computer.setActionCommand("2");
 		groupComputer.add( rb3Computer );
@@ -580,13 +575,6 @@ public class gui {
 		
 		
 		
-		pnlMenue.add( rb1Computer,new GridBagConstraints(
-									1, 1, 
-									1, 1,
-										0.0, 0.0, 
-									GridBagConstraints.LINE_START, 										GridBagConstraints.HORIZONTAL, 
-									new Insets(10, 10, 10, 10),
-									0, 0));
 		pnlMenue.add( rb2Computer,new GridBagConstraints(
 									2, 1, 
 									1, 1,
