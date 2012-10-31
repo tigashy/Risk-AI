@@ -1,5 +1,7 @@
 package risk.game;
 
+import risk.gui.gui;
+
 public class Engine {
 	
 	private Continent northAmerica;
@@ -8,11 +10,13 @@ public class Engine {
 	private Continent africa;
 	private Continent asia;
 	private Continent australia;
+	private gui gui;
 	
 	
 	public Engine() {
 		initCountries();
 		initGameCards();
+		gui = new gui();
 	}
 	
 	public void run() {
