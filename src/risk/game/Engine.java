@@ -48,6 +48,10 @@ public class Engine {
 		southAmerica.setCountry(new Country(false, 3, "Peru", southAmerica, 147, 346, 200, 100, "sAmerika_3"), 2);
 		southAmerica.setCountry(new Country(true, 3, "Venezuela", southAmerica, 158, 238, 200, 200, "sAmerika_4"), 3);
 		
+		for (int i = 0; i < southAmerica.getCountries().length; i++) {
+			gui.getPnlGame().add(southAmerica.getCountry(i).getLabel());
+		}
+		
 		/* Europe */
 		europe = new Continent("Europe", 5, 7);
 		europe.setCountry(new Country(false, 4, "Great Britain", europe, 370, 70, 200, 200, "europa_1"), 0);
@@ -58,6 +62,10 @@ public class Engine {
 		europe.setCountry(new Country(true, 6, "Ukraine", europe, 470, 30, 300, 300, "europa_6"), 5);
 		europe.setCountry(new Country(true, 4, "Western Europe", europe, 380, 110, 200, 200, "europa_7"), 6);
 		
+		for (int i = 0; i < europe.getCountries().length; i++) {
+			gui.getPnlGame().add(europe.getCountry(i).getLabel());
+		}
+		
 		/* Africa */
 		africa = new Continent("Africa", 3, 6);
 		africa.setCountry(new Country(false, 3, "Congo", africa,455, 332, 200, 100,"afrika_1"), 0);
@@ -66,6 +74,10 @@ public class Engine {
 		africa.setCountry(new Country(false, 2, "Madagascar", africa,560, 320, 300, 200,"afrika_4"), 3);
 		africa.setCountry(new Country(true, 6, "North Africa", africa,320, 210, 200, 200,"afrika_5"), 4);
 		africa.setCountry(new Country(false, 3, "South Africa", africa,450, 291, 300, 300,"afrika_6"), 5);
+		
+		for (int i = 0; i < africa.getCountries().length; i++) {
+			gui.getPnlGame().add(africa.getCountry(i).getLabel());
+		}
 		
 		/* Asia */
 		asia = new Continent("Asia", 7, 12);
@@ -82,12 +94,20 @@ public class Engine {
 		asia.setCountry(new Country(true, 4, "Ural", asia,550, 15, 300, 300,"asien_11"), 10);
 		asia.setCountry(new Country(false, 3, "Yakutsk", asia, 670, 50, 300, 200, "asien_12"), 11);
 		
+		for (int i = 0; i < asia.getCountries().length; i++) {
+			gui.getPnlGame().add(asia.getCountry(i).getLabel());
+		}
+		
 		/* Australia */
 		australia = new Continent("Australia", 2, 4);
 		australia.setCountry(new Country(false, 2, "Eastern Australia", australia,815, 425, 100, 100,"australien_1"), 0);
 		australia.setCountry(new Country(true, 3, "Indonesia", australia,682, 265, 200, 200,"australien_2"), 1);
 		australia.setCountry(new Country(false, 3, "New Guinea", australia,800, 345, 200, 100,"australien_3"), 2);
 		australia.setCountry(new Country(false, 3, "Western Australia", australia,772, 425, 100, 100,"australien_4"), 3);
+		
+		for (int i = 0; i < australia.getCountries().length; i++) {
+			gui.getPnlGame().add(australia.getCountry(i).getLabel());
+		}
 		
 		/* Setting neighbors for Alaska */
 		northAmerica.getCountry(0).setNeighbor(northAmerica.getCountry(1), 0);
