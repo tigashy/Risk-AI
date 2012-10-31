@@ -1,5 +1,7 @@
 package risk.game;
 
+import java.util.Random;
+
 import org.apache.log4j.Logger;
 
 import risk.Main;
@@ -15,13 +17,14 @@ public class Engine {
 	private Continent australia;
 	private gui gui;
 	private Player[] playerList;
+	private RiskCard[] riskCards;
 	private static final Logger logger = Logger.getLogger(Main.class);
 	
 	
 	public Engine() {
 		gui = new gui();
 		initCountries();
-		initGameCards();
+		initRiskCards();
 	}
 
 	public void run() {
@@ -411,8 +414,31 @@ public class Engine {
 		australia.getCountry(3).setNeighbor(australia.getCountry(2), 2);
 	}
 	
-	private void initGameCards() {
-		// TODO Auto-generated method stub
-		
+	private void initRiskCards() {
+		int cSoldier = 0, cCavalry = 0, cCanon = 0, cJoker = 0;
+		this.riskCards = new RiskCard[44];
+		Random r = new Random();
+		int i = 0;
+		while (i < 44) {
+			int t = r.nextInt(4);
+			if (t == 0 && cJoker < 2) {
+				this.riskCards[i] = new RiskCard(t);
+				cJoker++;
+				i++;
+			} else if (t == 1 && cSoldier < 14) {
+				this.riskCards[i] = new RiskCard(t);
+				cSoldier++;
+				i++;
+			} else if (t == 2 && cCavalry < 14) {
+				this.riskCards[i] = new RiskCard(t);
+				cCavalry++;
+				i++;
+			} else if (t == 3 && cCanon < 14) {
+				this.riskCards[i] = new RiskCard(t);
+				cCanon++;
+				i++;
+			}
+		}
+		System.out.println("Joker: " + cJoker + "\nSoldier: " + cSoldier + "\nCavalry: " +cCavalry + "\nCanon: " + cCanon);
 	}
 }

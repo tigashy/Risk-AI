@@ -1,15 +1,16 @@
 package risk.game;
 
-public class RiscCard {
+public class RiskCard {
 	
 	/*
-	 * 1.Soldier
-	 * 2.Cavalryman
-	 * 3.Canon
+	 * 0. Joker
+	 * 1. Soldier
+	 * 2. Cavalryman
+	 * 3. Canon
 	 */
 	private int symbol;
 	
-	public RiscCard(int symbol) {
+	public RiskCard(int symbol) {
 		this.symbol = symbol;
 	}
 	public int getSymbol() {

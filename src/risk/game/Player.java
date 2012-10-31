@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class Player {
 	private PlayerColor c;
 	private ArrayList<Country> controledCountries;
-	private RiscCard[] riscCard;
+	private RiskCard[] riscCard;
 	
 	public Player(PlayerColor c ){
 		this.c = c;
-		this.riscCard = new RiscCard[5];
+		this.riscCard = new RiskCard[5];
 		this.controledCountries = new ArrayList<Country>(42);
 	}
 	public PlayerColor getColor() {
