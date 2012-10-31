@@ -11,6 +11,9 @@ public class Player {
 		this.c = c;
 		this.riscCard = new RiscCard[5];
 	}
+	public Color getColor() {
+		return this.c;
+	}
 }
 
 

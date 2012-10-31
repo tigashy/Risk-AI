@@ -1,5 +1,8 @@
 package risk.game;
 
+import org.apache.log4j.Logger;
+
+import risk.Main;
 import risk.gui.gui;
 
 public class Engine {
@@ -11,21 +14,27 @@ public class Engine {
 	private Continent asia;
 	private Continent australia;
 	private gui gui;
+	private Player[] playerList;
+	private static final Logger logger = Logger.getLogger(Main.class);
 	
 	
 	public Engine() {
 		gui = new gui();
 		initCountries();
-		initPlayers();
 		initGameCards();
 	}
 	
 	private void initPlayers() {
-		
-		
+		System.out.println("test");
+		playerList = new Player[gui.getPlayerCount()];
+		for (int i = 0; i < playerList.length; i++) {
+			playerList[i] = new Player(Color.values()[i]);
+			System.out.println(playerList[i].getColor().getFileColor());
+		}
 	}
 
 	public void run() {
+		initPlayers();
 		
 	}
 

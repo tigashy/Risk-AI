@@ -18,6 +18,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
+import risk.Main;
+
 
 
 public class gui {
@@ -637,7 +639,7 @@ public class gui {
 				//Spiel inizialisieren neue pnlmain machen
 				pnlMenue.setVisible(false);				
 				Game();
-				System.out.println();
+				Main.gameEngine.run();
 				
 			}
 		});
