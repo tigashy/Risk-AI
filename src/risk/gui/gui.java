@@ -7,8 +7,6 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
@@ -30,6 +28,7 @@ public class gui {
 	private JRadioButton rb3Computer = new JRadioButton("3");
 	private JRadioButton rb4Computer = new JRadioButton("4");
 	private JRadioButton rb5Computer = new JRadioButton("5");
+	private JRadioButton rb6Computer = new JRadioButton("6");
 	private ButtonGroup groupComputer = new ButtonGroup();
 	private JButton btnPlay = new JButton("Play");
 	private JLabel lblComputer = new JLabel("Computer:");
@@ -576,6 +575,8 @@ public class gui {
 		rb4Computer.setActionCommand("4");
 		groupComputer.add( rb5Computer );
 		rb5Computer.setActionCommand("5");
+		groupComputer.add( rb6Computer );
+		rb6Computer.setActionCommand("6");
 		
 		
 		
@@ -614,6 +615,13 @@ public class gui {
 									GridBagConstraints.LINE_START, 										GridBagConstraints.HORIZONTAL, 
 									new Insets(10, 10, 10, 10),
 									0, 0));
+		pnlMenue.add( rb6Computer,new GridBagConstraints(
+									6, 1, 
+									1, 1,
+										0.0, 0.0, 
+									GridBagConstraints.LINE_START, 										GridBagConstraints.HORIZONTAL, 
+									new Insets(10, 10, 10, 10),
+									0, 0));	
 		pnlMenue.add( lblComputer,new GridBagConstraints(
 									0, 1, 
 									1, 1,
