@@ -32,6 +32,10 @@ public class Engine {
 		northAmerica.setCountry(new Country(false, 6, "Ontario", northAmerica, 135, 55, 200, 200, "nAmerika_7"), 6);
 		northAmerica.setCountry(new Country(false, 3, "Quebec", northAmerica, 198, 48, 200, 200, "nAmerika_8"), 7);
 		northAmerica.setCountry(new Country(false, 4, "Western United States", northAmerica, 66, 90, 200, 200, "nAmerika_9"), 8);
+
+		for (int i = 0; i < northAmerica.getCountries().length; i++) {
+			gui.getPnlGame().add(northAmerica.getCountry(i).getLabel());
+		}
 		
 		/* South America */
 		southAmerica = new Continent("South America", 2, 4);

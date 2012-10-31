@@ -66,4 +66,8 @@ public class Country {
 	public Continent getContinent() {
 		return continent;
 	}
+	
+	public ImageLabel getLabel() {
+		return this.label;
+	}
 }
