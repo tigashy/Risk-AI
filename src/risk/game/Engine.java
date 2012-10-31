@@ -14,9 +14,9 @@ public class Engine {
 	
 	
 	public Engine() {
+		gui = new gui();
 		initCountries();
 		initGameCards();
-		gui = new gui();
 	}
 	
 	public void run() {
