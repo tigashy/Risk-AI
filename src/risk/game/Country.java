@@ -1,5 +1,10 @@
 package risk.game;
 
+import java.awt.Color;
+
+import javax.swing.JLabel;
+
+import risk.gui.ImageLabel;
 
 public class Country {
 	
@@ -8,13 +13,20 @@ public class Country {
 	private String name;
 	private int numberOfArmies;
 	private Continent continent;
+	private ImageLabel label;
 	
-	public Country(boolean continentBorder, int numberOfNeighbors, String name, Continent continent) {
+	
+	
+	public Country(boolean continentBorder, int numberOfNeighbors, String name, Continent continent, int x, int y, int width, int height, String nameLabel) {
 		this.continentBorder = continentBorder;
 		this.neighbors = new Country[numberOfNeighbors];
 		this.name = name;
 		this.numberOfArmies = 0;
 		this.continent = continent;
+		this.label.setBounds(x, y, width, height);
+		label.setForeground(Color.WHITE);
+		label.setHorizontalTextPosition(JLabel.CENTER);
+		label.setVerticalTextPosition(JLabel.CENTER);
 	}
 	
 	public void setNeighbor(Country neighbor, int position) {
