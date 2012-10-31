@@ -21,48 +21,50 @@ import javax.swing.JRadioButton;
 
 
 public class gui {
-	JFrame frame = new JFrame();
-	JRadioButton rb1Computer = new JRadioButton("1");
-	JRadioButton rb2Computer = new JRadioButton("2");
-	JRadioButton rb3Computer = new JRadioButton("3");
-	JRadioButton rb4Computer = new JRadioButton("4");
-	JRadioButton rb5Computer = new JRadioButton("5");
-	ButtonGroup groupComputer = new ButtonGroup();
-	JButton btnPlay = new JButton("Play");
-	JLabel lblComputer = new JLabel("Computer:");
-	JPanel pnlMenue = new JPanel();
-	JPanel pnlGame = new JPanel();
+	private JFrame frame = new JFrame();
+	private JRadioButton rb1Computer = new JRadioButton("1");
+	private JRadioButton rb2Computer = new JRadioButton("2");
+	private JRadioButton rb3Computer = new JRadioButton("3");
+	private JRadioButton rb4Computer = new JRadioButton("4");
+	private JRadioButton rb5Computer = new JRadioButton("5");
+	private ButtonGroup groupComputer = new ButtonGroup();
+	private JButton btnPlay = new JButton("Play");
+	private JLabel lblComputer = new JLabel("Computer:");
+	private JPanel pnlMenue = new JPanel();
+	private JPanel pnlGame = new JPanel();
 	
-	ImageLabel lAfrikaAmerika = new ImageLabel("Images/Linien/AmeikaAfrika.gif");
-	ImageLabel lnAmerika1 = new ImageLabel("Images/Linien/1.gif");
-	ImageLabel lnAmerika2 = new ImageLabel("Images/Linien/2.gif");
-	ImageLabel lnAmerika3 = new ImageLabel("Images/Linien/3.gif");
-	ImageLabel lAmerikaEuropa = new ImageLabel("Images/Linien/AmerikaEuropa.gif");
-	ImageLabel lEuropa1 = new ImageLabel("Images/Linien/Europa1.gif");
-	ImageLabel lEuropa2 = new ImageLabel("Images/Linien/Europa2.gif");
-	ImageLabel lEuropa3 = new ImageLabel("Images/Linien/Europa3.gif");
-	ImageLabel lEuropa4 = new ImageLabel("Images/Linien/Europa4.gif");
-	ImageLabel lEuropa5 = new ImageLabel("Images/Linien/Europa5.gif");
-	ImageLabel lEuropa6 = new ImageLabel("Images/Linien/Europa6.gif");
-	ImageLabel lAfrika1 = new ImageLabel("Images/Linien/afrika1.gif");
-	ImageLabel lAfrika2 = new ImageLabel("Images/Linien/afrika2.gif");
-	ImageLabel lEuropaAfrika1 = new ImageLabel("Images/Linien/afrikaEuropa1.gif");
-	ImageLabel lEuropaAfrika2 = new ImageLabel("Images/Linien/afrikaEuropa2.gif");
-	ImageLabel lEuropaAfrika3 = new ImageLabel("Images/Linien/afrikaEuropa3.gif");
-	ImageLabel lAfrikaAsien = new ImageLabel("Images/Linien/afrikaAsien.gif");
-	ImageLabel lAsien1 = new ImageLabel("Images/Linien/Asien1.gif");
-	ImageLabel lAsien2 = new ImageLabel("Images/Linien/Asien2.gif");
-	ImageLabel lAustralien1 = new ImageLabel("Images/Linien/Australien1.gif");
-	ImageLabel lAustralien2 = new ImageLabel("Images/Linien/Australien2.gif");
-	ImageLabel lAustralien3 = new ImageLabel("Images/Linien/Australien3.gif");
-	ImageLabel lAustralien4 = new ImageLabel("Images/Linien/Australien4.gif");
-	ImageLabel lAustralien5 = new ImageLabel("Images/Linien/Australien5.gif");
-	ImageLabel lAsienAmerika1 = new ImageLabel("Images/Linien/AsienAmerika1.gif");
-	ImageLabel lAsienAmerika2 = new ImageLabel("Images/Linien/AsienAmerika2.gif");
+	private ImageLabel lAfrikaAmerika = new ImageLabel("Images/Linien/AmeikaAfrika.gif");
+	private ImageLabel lnAmerika1 = new ImageLabel("Images/Linien/1.gif");
+	private ImageLabel lnAmerika2 = new ImageLabel("Images/Linien/2.gif");
+	private ImageLabel lnAmerika3 = new ImageLabel("Images/Linien/3.gif");
+	private ImageLabel lAmerikaEuropa = new ImageLabel("Images/Linien/AmerikaEuropa.gif");
+	private ImageLabel lEuropa1 = new ImageLabel("Images/Linien/Europa1.gif");
+	private ImageLabel lEuropa2 = new ImageLabel("Images/Linien/Europa2.gif");
+	private ImageLabel lEuropa3 = new ImageLabel("Images/Linien/Europa3.gif");
+	private ImageLabel lEuropa4 = new ImageLabel("Images/Linien/Europa4.gif");
+	private ImageLabel lEuropa5 = new ImageLabel("Images/Linien/Europa5.gif");
+	private ImageLabel lEuropa6 = new ImageLabel("Images/Linien/Europa6.gif");
+	private ImageLabel lAfrika1 = new ImageLabel("Images/Linien/afrika1.gif");
+	private ImageLabel lAfrika2 = new ImageLabel("Images/Linien/afrika2.gif");
+	private ImageLabel lEuropaAfrika1 = new ImageLabel("Images/Linien/afrikaEuropa1.gif");
+	private ImageLabel lEuropaAfrika2 = new ImageLabel("Images/Linien/afrikaEuropa2.gif");
+	private ImageLabel lEuropaAfrika3 = new ImageLabel("Images/Linien/afrikaEuropa3.gif");
+	private ImageLabel lAfrikaAsien = new ImageLabel("Images/Linien/afrikaAsien.gif");
+	private ImageLabel lAsien1 = new ImageLabel("Images/Linien/Asien1.gif");
+	private ImageLabel lAsien2 = new ImageLabel("Images/Linien/Asien2.gif");
+	private ImageLabel lAustralien1 = new ImageLabel("Images/Linien/Australien1.gif");
+	private ImageLabel lAustralien2 = new ImageLabel("Images/Linien/Australien2.gif");
+	private ImageLabel lAustralien3 = new ImageLabel("Images/Linien/Australien3.gif");
+	private ImageLabel lAustralien4 = new ImageLabel("Images/Linien/Australien4.gif");
+	private ImageLabel lAustralien5 = new ImageLabel("Images/Linien/Australien5.gif");
+	private ImageLabel lAsienAmerika1 = new ImageLabel("Images/Linien/AsienAmerika1.gif");
+	private ImageLabel lAsienAmerika2 = new ImageLabel("Images/Linien/AsienAmerika2.gif");
 	
+	public JPanel getPnlGame(){
+		return this.pnlGame;
+	}
 	
-	
-	
+	/*
 	ImageLabel nAmerika_1 = new ImageLabel();
 	ImageLabel nAmerika_2 = new ImageLabel();
 	ImageLabel nAmerika_3 = new ImageLabel();
@@ -110,8 +112,9 @@ public class gui {
 	ImageLabel australien_2 = new ImageLabel();
 	ImageLabel australien_3 = new ImageLabel();
 	ImageLabel australien_4 = new ImageLabel();
+	*/
 	
-	public void events(){
+	/*public void events(){
 		
 		nAmerika_1.addMouseListener(new MouseListener() {			
 			@Override
@@ -146,7 +149,7 @@ public class gui {
 	public void mousePressed(MouseEvent e) {
 		System.out.println("HIER");
 	}
-	
+	*/
 
 	
 	
