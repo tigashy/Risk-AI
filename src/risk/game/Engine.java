@@ -16,9 +16,15 @@ public class Engine {
 	public Engine() {
 		gui = new gui();
 		initCountries();
+		initPlayers();
 		initGameCards();
 	}
 	
+	private void initPlayers() {
+		
+		
+	}
+
 	public void run() {
 		
 	}
@@ -34,7 +40,7 @@ public class Engine {
 		northAmerica.setCountry(new Country(true, 4, "Greenland", northAmerica, 260, 0, 200, 200, "nAmerika_5"), 4);
 		northAmerica.setCountry(new Country(false, 4, "Northwest Territory", northAmerica, 15, 0, 300, 200, "nAmerika_6"), 5);
 		northAmerica.setCountry(new Country(false, 6, "Ontario", northAmerica, 135, 55, 200, 200, "nAmerika_7"), 6);
-		northAmerica.setCountry(new Country(false, 3, "Quebec", northAmerica, 198, 48, 200, 200, "nAmerika_8"), 7);
+		northAmerica.setCountry(new Country(false, 4, "Quebec", northAmerica, 198, 48, 200, 200, "nAmerika_8"), 7);
 		northAmerica.setCountry(new Country(false, 4, "Western United States", northAmerica, 66, 90, 200, 200, "nAmerika_9"), 8);
 
 		for (int i = 0; i < northAmerica.getCountries().length; i++) {
