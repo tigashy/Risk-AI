@@ -41,10 +41,12 @@ public class Country {
 
 	public void setNumberOfArmies(int numberOfArmies) {
 		this.numberOfArmies = numberOfArmies;
+		label.setText("" + numberOfArmies);
 	}
 	
 	public void increasseNumberOfArmies(int number) {
 		this.numberOfArmies += number;
+		label.setText("" + numberOfArmies);
 	}
 
 	public boolean isContinentBorder() {
