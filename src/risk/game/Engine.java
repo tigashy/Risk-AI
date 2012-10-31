@@ -52,34 +52,34 @@ public class Engine {
 		
 		/* Africa */
 		africa = new Continent("Africa", 3, 6);
-		africa.setCountry(new Country(false, 3, "Congo", africa), 0);
-		africa.setCountry(new Country(true, 6, "East Africa", africa), 1);
-		africa.setCountry(new Country(true, 4, "Egypt", africa), 2);
-		africa.setCountry(new Country(false, 2, "Madagascar", africa), 3);
-		africa.setCountry(new Country(true, 6, "North Africa", africa), 4);
-		africa.setCountry(new Country(false, 3, "South Africa", africa), 5);
+		africa.setCountry(new Country(false, 3, "Congo", africa,455, 332, 200, 100,"afrika_1"), 0);
+		africa.setCountry(new Country(true, 6, "East Africa", africa,480, 270, 200, 200,"afrika_2"), 1);
+		africa.setCountry(new Country(true, 4, "Egypt", africa,457, 190, 200, 200,"afrika_3"), 2);
+		africa.setCountry(new Country(false, 2, "Madagascar", africa,560, 320, 300, 200,"afrika_4"), 3);
+		africa.setCountry(new Country(true, 6, "North Africa", africa,320, 210, 200, 200,"afrika_5"), 4);
+		africa.setCountry(new Country(false, 3, "South Africa", africa,450, 291, 300, 300,"afrika_6"), 5);
 		
 		/* Asia */
 		asia = new Continent("Asia", 7, 12);
-		asia.setCountry(new Country(true, 5, "Afghanistan", asia), 0);
-		asia.setCountry(new Country(false, 6, "China", asia), 1);
-		asia.setCountry(new Country(false, 4, "India", asia), 2);
-		asia.setCountry(new Country(false, 4, "Irkutsk", asia), 3);
-		asia.setCountry(new Country(false, 2, "Japan", asia), 4);
-		asia.setCountry(new Country(true, 5, "Kamchatka", asia), 5);
-		asia.setCountry(new Country(true, 6, "Middle East", asia), 6);
-		asia.setCountry(new Country(false, 5, "Mongolia", asia), 7);
-		asia.setCountry(new Country(true, 3, "Siam", asia), 8);
-		asia.setCountry(new Country(false, 5, "Siberia", asia), 9);
-		asia.setCountry(new Country(true, 4, "Ural", asia), 10);
-		asia.setCountry(new Country(false, 3, "Yakutsk", asia), 11);
+		asia.setCountry(new Country(true, 5, "Afghanistan", asia, 555, 107, 200, 200,"asien_1"), 0);
+		asia.setCountry(new Country(false, 6, "China", asia,633, 148, 200, 200,"asien_2"), 1);
+		asia.setCountry(new Country(false, 4, "India", asia,603, 190, 200, 200,"asien_3"), 2);
+		asia.setCountry(new Country(false, 4, "Irkutsk", asia,660, 128, 200, 100,"asien_4"), 3);
+		asia.setCountry(new Country(false, 2, "Japan", asia,790, 100, 300, 300,"asien_5"), 4);
+		asia.setCountry(new Country(true, 5, "Kamchatka", asia,760, 80, 300, 200,"asien_6"), 5);
+		asia.setCountry(new Country(true, 6, "Middle East", asia, 497, 177, 200, 200, "asien_7"), 6);
+		asia.setCountry(new Country(false, 5, "Mongolia", asia,655, 120, 200, 200,"asien_8"), 7);
+		asia.setCountry(new Country(true, 3, "Siam", asia,707, 220, 200, 200,"asien_8"), 8);
+		asia.setCountry(new Country(false, 5, "Siberia", asia,583, 105, 200, 100,"asien_10"), 9);
+		asia.setCountry(new Country(true, 4, "Ural", asia,550, 15, 300, 300,"asien_11"), 10);
+		asia.setCountry(new Country(false, 3, "Yakutsk", asia, 670, 50, 300, 200, "asien_12"), 11);
 		
 		/* Australia */
 		australia = new Continent("Australia", 2, 4);
-		australia.setCountry(new Country(false, 2, "Eastern Australia", australia), 0);
-		australia.setCountry(new Country(true, 3, "Indonesia", australia), 1);
-		australia.setCountry(new Country(false, 3, "New Guinea", australia), 2);
-		australia.setCountry(new Country(false, 3, "Western Australia", australia), 3);
+		australia.setCountry(new Country(false, 2, "Eastern Australia", australia,815, 425, 100, 100,"australien_1"), 0);
+		australia.setCountry(new Country(true, 3, "Indonesia", australia,682, 265, 200, 200,"australien_2"), 1);
+		australia.setCountry(new Country(false, 3, "New Guinea", australia,800, 345, 200, 100,"australien_3"), 2);
+		australia.setCountry(new Country(false, 3, "Western Australia", australia,772, 425, 100, 100,"australien_4"), 3);
 		
 		/* Setting neighbors for Alaska */
 		northAmerica.getCountry(0).setNeighbor(northAmerica.getCountry(1), 0);
