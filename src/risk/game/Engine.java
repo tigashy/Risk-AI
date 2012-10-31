@@ -23,32 +23,32 @@ public class Engine {
 		
 		/* North America */
 		northAmerica = new Continent("North America", 5, 9);
-		northAmerica.setCountry(new Country(true, 3, "Alaska", northAmerica), 0);
-		northAmerica.setCountry(new Country(false, 4, "Alberta", northAmerica), 1);
-		northAmerica.setCountry(new Country(true, 3, "Central America", northAmerica), 2);
-		northAmerica.setCountry(new Country(false, 4, "Eastern United States", northAmerica), 3);
-		northAmerica.setCountry(new Country(true, 4, "Greenland", northAmerica), 4);
-		northAmerica.setCountry(new Country(false, 4, "Northwest Territory", northAmerica), 5);
-		northAmerica.setCountry(new Country(false, 6, "Ontario", northAmerica), 6);
-		northAmerica.setCountry(new Country(false, 3, "Quebec", northAmerica), 7);
-		northAmerica.setCountry(new Country(false, 4, "Western United States", northAmerica), 8);
+		northAmerica.setCountry(new Country(true, 3, "Alaska", northAmerica, 0, 80, 120, 60, "nAmerika_1"), 0);
+		northAmerica.setCountry(new Country(false, 4, "Alberta", northAmerica, 80, 90, 200, 100, "nAmerika_2"), 1);
+		northAmerica.setCountry(new Country(true, 3, "Central America", northAmerica, 58, 160, 200, 200, "nAmerika_3"), 2);
+		northAmerica.setCountry(new Country(false, 4, "Eastern United States", northAmerica, 102, 100, 200, 200, "nAmerika_4"), 3);
+		northAmerica.setCountry(new Country(true, 4, "Greenland", northAmerica, 260, 0, 200, 200, "nAmerika_5"), 4);
+		northAmerica.setCountry(new Country(false, 4, "Northwest Territory", northAmerica, 15, 0, 300, 200, "nAmerika_6"), 5);
+		northAmerica.setCountry(new Country(false, 6, "Ontario", northAmerica, 135, 55, 200, 200, "nAmerika_7"), 6);
+		northAmerica.setCountry(new Country(false, 3, "Quebec", northAmerica, 198, 48, 200, 200, "nAmerika_8"), 7);
+		northAmerica.setCountry(new Country(false, 4, "Western United States", northAmerica, 66, 90, 200, 200, "nAmerika_9"), 8);
 		
 		/* South America */
 		southAmerica = new Continent("South America", 2, 4);
-		southAmerica.setCountry(new Country(false, 2, "Argentina", southAmerica), 0);
-		southAmerica.setCountry(new Country(true, 4, "Brazil", southAmerica), 1);
-		southAmerica.setCountry(new Country(false, 3, "Peru", southAmerica), 2);
-		southAmerica.setCountry(new Country(true, 3, "Venezuela", southAmerica), 3);
+		southAmerica.setCountry(new Country(false, 2, "Argentina", southAmerica, 130, 380, 200, 200, "sAmerika_1"), 0);
+		southAmerica.setCountry(new Country(true, 4, "Brazil", southAmerica, 122, 304, 300, 200, "sAmerika_2"), 1);
+		southAmerica.setCountry(new Country(false, 3, "Peru", southAmerica, 147, 346, 200, 100, "sAmerika_3"), 2);
+		southAmerica.setCountry(new Country(true, 3, "Venezuela", southAmerica, 158, 238, 200, 200, "sAmerika_4"), 3);
 		
 		/* Europe */
 		europe = new Continent("Europe", 5, 7);
-		europe.setCountry(new Country(false, 4, "Great Britain", europe), 0);
-		europe.setCountry(new Country(true, 3, "Iceland", europe), 1);
-		europe.setCountry(new Country(false, 5, "Northern Europe", europe), 2);
-		europe.setCountry(new Country(false, 4, "Scandinavia", europe), 3);
-		europe.setCountry(new Country(true, 6, "Southern Europe", europe), 4);
-		europe.setCountry(new Country(true, 6, "Ukraine", europe), 5);
-		europe.setCountry(new Country(true, 4, "Western Europe", europe), 6);
+		europe.setCountry(new Country(false, 4, "Great Britain", europe, 370, 70, 200, 200, "europa_1"), 0);
+		europe.setCountry(new Country(true, 3, "Iceland", europe, 350, 70, 200, 100, "europa_2"), 1);
+		europe.setCountry(new Country(false, 5, "Northern Europe", europe, 418, 87, 300, 200, "europa_3"), 2);
+		europe.setCountry(new Country(false, 4, "Scandinavia", europe, 430, 45, 200, 200, "europa_4"), 3);
+		europe.setCountry(new Country(true, 6, "Southern Europe", europe, 435, 116, 200, 200, "europa_5"), 4);
+		europe.setCountry(new Country(true, 6, "Ukraine", europe, 470, 30, 300, 300, "europa_6"), 5);
+		europe.setCountry(new Country(true, 4, "Western Europe", europe, 380, 110, 200, 200, "europa_7"), 6);
 		
 		/* Africa */
 		africa = new Continent("Africa", 3, 6);
