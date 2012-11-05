@@ -20,7 +20,7 @@ import risk.Main;
 
 
 
-public class gui {
+public class Gui {
 	private int playerCount;
 	private JFrame frame = new JFrame();
 	private JRadioButton rb2Computer = new JRadioButton("2");
@@ -530,7 +530,7 @@ public class gui {
 	
 
 	
-	public gui(){		
+	public Gui(){		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(980, 600);
 		frame.setTitle("Risiko");	

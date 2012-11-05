@@ -5,7 +5,7 @@ import java.util.Random;
 import org.apache.log4j.Logger;
 
 import risk.Main;
-import risk.gui.gui;
+import risk.gui.Gui;
 
 public class Engine {
 	
@@ -15,14 +15,14 @@ public class Engine {
 	private Continent africa;
 	private Continent asia;
 	private Continent australia;
-	private gui gui;
+	private Gui gui;
 	private Player[] playerList;
 	private RiskCard[] riskCards;
 	private static final Logger logger = Logger.getLogger(Main.class);
 	
 	
 	public Engine() {
-		gui = new gui();
+		gui = new Gui();
 		initCountries();
 		initRiskCards();
 	}
