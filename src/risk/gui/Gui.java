@@ -21,7 +21,7 @@ import risk.Main;
 
 
 public class Gui {
-	private int playerCount;
+	private int playerCount = 2;
 	private JFrame frame = new JFrame();
 	private JRadioButton rb2Computer = new JRadioButton("2");
 	private JRadioButton rb3Computer = new JRadioButton("3");
@@ -631,7 +631,12 @@ public class Gui {
 		btnPlay.addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
+				try{
 				playerCount = Integer.parseInt(groupComputer.getSelection().getActionCommand());
+				
+				}catch(Exception e){
+					playerCount =2;
+				}
 				//Spiel inizialisieren neue pnlmain machen
 				pnlMenue.setVisible(false);				
 				Game();
