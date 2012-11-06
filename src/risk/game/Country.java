@@ -15,6 +15,8 @@ public class Country {
 	private int numberOfArmies;
 	private Continent continent;
 	private ImageLabel label;
+	private boolean inTree;
+	private Player player;
 	
 	
 	
@@ -77,5 +79,21 @@ public class Country {
 	public void setColor(PlayerColor c, int number) {
 		//String filePath = "Images/" + this.continent.toString() + "/" + number + "/" + c.getFileColor()));
 		label.setIcon(new ImageIcon("Images/" + this.continent.toString() + "/" + number + "/" + c.getFileColor() + ".gif"));
+	}
+
+	public boolean isInTree() {
+		return inTree;
+	}
+
+	public void setInTree(boolean inTree) {
+		this.inTree = inTree;
+	}
+
+	public Player getPlayer() {
+		return player;
+	}
+
+	public void setPlayer(Player player) {
+		this.player = player;
 	}
 }

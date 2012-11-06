@@ -1,4 +1,7 @@
-package risk.game;
+package risk.ai;
+
+import risk.game.Player;
+import risk.game.PlayerColor;
 
 public class Agent extends Player {
 
