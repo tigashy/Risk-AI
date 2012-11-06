@@ -6,6 +6,9 @@ package risk;
 import org.apache.log4j.Logger;
 
 import risk.game.Engine;
+import risk.game.Player;
+import risk.game.PlayerColor;
+import risk.game.RiskCard;
 
 /**
  * @author bene
