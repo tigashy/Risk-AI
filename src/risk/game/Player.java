@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class Player {
 	private PlayerColor c;
 	private ArrayList<Country> controledCountries;
-	private RiskCard[] riscCard;
+	private RiscCard[] riscCard;
 	
-	public void setRiscCard(RiskCard card){
+	public void setRiscCard(RiscCard card){
 		for(int i = 0; i< riscCard.length; i++)
 		{
 			if(riscCard[i]== null){
@@ -19,10 +19,10 @@ public class Player {
 	
 	public Player(PlayerColor c ){
 		this.c = c;
-		this.riscCard = new RiskCard[5];
+		this.riscCard = new RiscCard[5];
 		for(int i = 0; i< riscCard.length;i++)
 		{
-			riscCard[i] = new RiskCard(4);
+			riscCard[i] = new RiscCard(4);
 		}
 		this.controledCountries = new ArrayList<Country>(42);
 	}
@@ -76,7 +76,7 @@ public class Player {
 				while(i<(riscCard.length-1))
 	        	{            	
 					riscCard[i] = riscCard[i+1];
-					riscCard[i+1] = new RiskCard(4);
+					riscCard[i+1] = new RiscCard(4);
 	            	i++;
 	        	}
 				i = index-1;

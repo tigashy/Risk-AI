@@ -17,7 +17,7 @@ public class Engine {
 	private Continent australia;
 	private Gui gui;
 	private Player[] playerList;
-	private RiskCard[] riskCards;
+	private RiscCard[] riskCards;
 	private static final Logger logger = Logger.getLogger(Main.class);
 	public int waitingTime;
 	
@@ -430,25 +430,25 @@ public class Engine {
 	
 	private void initRiskCards() {
 		int cSoldier = 0, cCavalry = 0, cCanon = 0, cJoker = 0;
-		this.riskCards = new RiskCard[44];
+		this.riskCards = new RiscCard[44];
 		Random r = new Random();
 		int i = 0;
 		while (i < 44) {
 			int t = r.nextInt(4);
 			if (t == 0 && cJoker < 2) {
-				this.riskCards[i] = new RiskCard(t);
+				this.riskCards[i] = new RiscCard(t);
 				cJoker++;
 				i++;
 			} else if (t == 1 && cSoldier < 14) {
-				this.riskCards[i] = new RiskCard(t);
+				this.riskCards[i] = new RiscCard(t);
 				cSoldier++;
 				i++;
 			} else if (t == 2 && cCavalry < 14) {
-				this.riskCards[i] = new RiskCard(t);
+				this.riskCards[i] = new RiscCard(t);
 				cCavalry++;
 				i++;
 			} else if (t == 3 && cCanon < 14) {
-				this.riskCards[i] = new RiskCard(t);
+				this.riskCards[i] = new RiscCard(t);
 				cCanon++;
 				i++;
 			}
