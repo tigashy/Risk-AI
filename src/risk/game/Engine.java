@@ -20,6 +20,7 @@ public class Engine {
 	private RiscCard[] riskCards;
 	private static final Logger logger = Logger.getLogger(Main.class);
 	public int waitingTime;
+	private int riscCard=0;
 	
 	
 	public Engine(int waitingTime) {
