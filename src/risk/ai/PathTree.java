@@ -3,7 +3,6 @@ package risk.ai;
 import java.util.ArrayList;
 
 import risk.game.Country;
-import risk.game.Player;
 
 public class PathTree {
 
@@ -12,6 +11,7 @@ public class PathTree {
 	private boolean isRoot;
 	private boolean visited;
 	private Country country;
+	private static ArrayList<Country> addedCountries = new ArrayList<Country>();
 
 	private PathTree(PathTree predecessor, Country country) {
 		this.predecessor = predecessor;
@@ -19,6 +19,13 @@ public class PathTree {
 		this.visited = false;
 		this.successors = new ArrayList<PathTree>();
 		this.country = country;
+		for (Country c : this.country.getNeighbors()) {
+			if (addedCountries.contains(c) || c.getPlayer() == this.country.getPlayer()) {
+				continue; //skip countries that are already in the tree or belong to the player himself
+			}
+			addedCountries.add(c);
+			this.successors.add(new PathTree(this, c));
+		}
 	}
 
 	/**
@@ -31,11 +38,12 @@ public class PathTree {
 		this.visited = true;
 		this.successors = new ArrayList<PathTree>();
 		this.country = country;
-		//TODO check which countries need to be added an avoid loops
+		addedCountries.clear();
 		for (Country c : this.country.getNeighbors()) {
-			if (c.isInTree() || c.getPlayer() == this.country.getPlayer()) {
+			if (addedCountries.contains(c) || c.getPlayer() == this.country.getPlayer()) {
 				continue; //skip countries that are already in the tree or belong to the player himself
 			}
+			addedCountries.add(c);
 			this.successors.add(new PathTree(this, c));
 		}
 	}
