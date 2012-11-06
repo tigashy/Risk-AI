@@ -29,7 +29,7 @@ public class Player {
 	
 	public boolean checkRiscCard()
 	{
-		if(this.riscCard[4].getSymbol() != 4)
+		if(this.riscCard[4] != null)
 			return true;
 		else
 			return false;
@@ -69,14 +69,14 @@ public class Player {
 			if(count == 3){
 				break;
 			}
-			if(this.riscCard[i].getSymbol() == 4){break;}
+			if(this.riscCard[i] == null){break;}
 			if(this.riscCard[i].getSymbol() == delete){
 				int index = i;
 				count++;
 				while(i<(riscCard.length-1))
 	        	{            	
 					riscCard[i] = riscCard[i+1];
-					riscCard[i+1] = new RiscCard(4);
+					riscCard[i+1] = null;
 	            	i++;
 	        	}
 				i = index-1;

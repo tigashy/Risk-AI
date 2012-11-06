@@ -7,7 +7,6 @@ public class RiscCard {
 	 * 1. Soldier
 	 * 2. Cavalryman
 	 * 3. Canon
-	 * 4. null
 	 */
 	private int symbol;
 	
