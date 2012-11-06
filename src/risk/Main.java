@@ -20,7 +20,11 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		gameEngine = new Engine();
+		int waitingTime = 0;
+		if (args.length == 1) {
+			waitingTime = Integer.parseInt(args[0]);
+		} 
+		gameEngine = new Engine(waitingTime);
 	}
 
 }

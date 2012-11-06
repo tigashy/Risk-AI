@@ -17,10 +17,11 @@ public class Country {
 	private ImageLabel label;
 	private boolean inTree;
 	private Player player;
+	private int continentOrder;
 	
 	
 	
-	public Country(boolean continentBorder, int numberOfNeighbors, String name, Continent continent, int x, int y, int width, int height, String nameLabel) {
+	public Country(boolean continentBorder, int numberOfNeighbors, String name, Continent continent, int x, int y, int width, int height, String nameLabel, int continentOrder) {
 		this.continentBorder = continentBorder;
 		this.neighbors = new Country[numberOfNeighbors];
 		this.name = name;
@@ -33,6 +34,7 @@ public class Country {
 		this.label.setVerticalTextPosition(JLabel.CENTER);
 		this.label.setName(nameLabel);
 		this.label.setText("1");
+		this.continentOrder = continentOrder;
 	}
 	
 	public void setNeighbor(Country neighbor, int position) {
@@ -76,9 +78,12 @@ public class Country {
 	public ImageLabel getLabel() {
 		return this.label;
 	}
-	public void setColor(PlayerColor c, int number) {
-		//String filePath = "Images/" + this.continent.toString() + "/" + number + "/" + c.getFileColor()));
-		label.setIcon(new ImageIcon("Images/" + this.continent.toString() + "/" + number + "/" + c.getFileColor() + ".gif"));
+//	public void setColor(PlayerColor c, int number) {
+//		//String filePath = "Images/" + this.continent.toString() + "/" + number + "/" + c.getFileColor()));
+//		label.setIcon(new ImageIcon("Images/" + this.continent.toString() + "/" + number + "/" + c.getFileColor() + ".gif"));
+//	}
+	public void updateColor() {
+		label.setIcon(new ImageIcon("Images/" + this.continent.toString() + "/" + (this.continentOrder + 1) + "/" + this.player.getColor().getFileColor() + ".gif"));
 	}
 
 	public boolean isInTree() {
