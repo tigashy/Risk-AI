@@ -13,7 +13,7 @@ public class PathTree {
 	private Country country;
 	private static ArrayList<Country> addedCountries = new ArrayList<Country>();
 
-	private PathTree(PathTree predecessor, Country country) {
+	private PathTree(PathTree predecessor, Country country, int maxPathLength) {
 		this.predecessor = predecessor;
 		this.isRoot = false;
 		this.visited = false;
@@ -24,7 +24,7 @@ public class PathTree {
 				continue; //skip countries that are already in the tree or belong to the player himself
 			}
 			addedCountries.add(c);
-			this.successors.add(new PathTree(this, c));
+			this.successors.add(new PathTree(this, c, maxPathLength - 1));
 		}
 	}
 
@@ -38,13 +38,10 @@ public class PathTree {
 		this.visited = true;
 		this.successors = new ArrayList<PathTree>();
 		this.country = country;
-		addedCountries.clear();
 		for (Country c : this.country.getNeighbors()) {
-			if (addedCountries.contains(c) || c.getPlayer() == this.country.getPlayer()) {
-				continue; //skip countries that are already in the tree or belong to the player himself
-			}
+			addedCountries.clear();
 			addedCountries.add(c);
-			this.successors.add(new PathTree(this, c));
+			this.successors.add(new PathTree(this, c, maxPathLength - 1));
 		}
 	}
 
