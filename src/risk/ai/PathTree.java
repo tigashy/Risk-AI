@@ -32,7 +32,7 @@ public class PathTree {
 	 * 
 	 * @param country The root country from which the attack should be made
 	 */
-	public PathTree(Country country) {
+	public PathTree(Country country, int maxPathLength) {
 		this.predecessor = null;
 		this.isRoot = true;
 		this.visited = true;
