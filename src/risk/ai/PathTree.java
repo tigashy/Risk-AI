@@ -11,7 +11,7 @@ public class PathTree {
 	private boolean isRoot;
 	private boolean visited;
 	private Country country;
-	private static ArrayList<Country> addedCountries = new ArrayList<Country>();
+	private static ArrayList<Country> addedCountries = new ArrayList<Country>(); //TODO save per path not per tree
 
 	private PathTree(PathTree predecessor, Country country, int maxPathLength) {
 		this.predecessor = predecessor;
