@@ -5,6 +5,7 @@ package risk;
 
 import org.apache.log4j.Logger;
 
+import risk.game.Dice;
 import risk.game.Engine;
 import risk.game.Player;
 import risk.game.PlayerColor;
@@ -18,6 +19,7 @@ public class Main {
 
 	private static final Logger logger = Logger.getLogger(Main.class);
 	public static Engine gameEngine;
+	
 
 	/**
 	 * @param args
