@@ -20,9 +20,6 @@ public class PathTree {
 		this.successors = new ArrayList<PathTree>();
 		this.country = country;
 		for (Country c : this.country.getNeighbors()) {
-			if (addedCountries.contains(c) || c.getPlayer() == this.country.getPlayer()) {
-				continue; //skip countries that are already in the tree or belong to the player himself
-			}
 			addedCountries.add(c);
 			this.successors.add(new PathTree(this, c, maxPathLength - 1));
 		}
