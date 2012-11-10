@@ -35,6 +35,17 @@ public class Engine {
 		
 	}
 	
+/*	public void insDice(){
+		Dice verteidigung1 = new Dice(2);
+		Dice verteidigung2 = new Dice(2);
+
+		Dice Angriff1 = new Dice(1);
+		Dice Angriff2 = new Dice(1);
+		Dice Angriff3 = new Dice(1);
+		
+	}
+	*/
+	
 	private void initPlayers() {
 		playerList = new Player[gui.getPlayerCount()];
 		/*
