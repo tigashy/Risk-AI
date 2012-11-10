@@ -37,6 +37,15 @@ public class Country {
 	public void setNeighbor(Country neighbor, int position) {
 		this.neighbors[position] = neighbor;
 	}
+	
+	public boolean hasEnemyNeighbor() {
+		for (Country c:this.neighbors) {
+			if (c.player != this.player) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 	public int getNumberOfArmies() {
 		return numberOfArmies;

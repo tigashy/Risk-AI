@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Player {
 	private PlayerColor c;
-	private ArrayList<Country> controledCountries;
+	protected ArrayList<Country> controledCountries;
 	private RiscCard[] riscCard;
 	
 	public void setRiscCard(RiscCard card){
