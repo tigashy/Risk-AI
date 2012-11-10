@@ -23,5 +23,8 @@ public class Path {
 	public int getNumberOfArmies() {
 		return this.numberOfArmies;
 	}
+	public boolean isCountryInPath(Country c) {
+		return this.countries.contains(c);
+	}
 	
 }

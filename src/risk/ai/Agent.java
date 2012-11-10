@@ -15,10 +15,11 @@ public class Agent extends Player {
 		this.currentPaths = new ArrayList<Path>();
 	}
 	
-	public void buildPathsForAllCountries() {
+	private void buildPathsForAllCountries() {
 		currentPaths.clear();
 		for (Country c:this.controledCountries) {
 			if (c.hasEnemyNeighbor()) {
+				Path p = new Path(c);
 				
 			}
 		}
@@ -26,7 +27,7 @@ public class Agent extends Player {
 
 	@Override
 	public void newArmies() {
-		// TODO Auto-generated method stub
+		buildPathsForAllCountries();
 		
 	}
 
