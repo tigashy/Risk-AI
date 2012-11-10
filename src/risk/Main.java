@@ -5,16 +5,8 @@ package risk;
 
 import org.apache.log4j.Logger;
 
-import risk.game.Dice;
 import risk.game.Engine;
-import risk.game.Player;
-import risk.game.PlayerColor;
-import risk.game.RiscCard;
 
-/**
- * @author bene
- * 
- */
 public class Main {
 
 	private static final Logger logger = Logger.getLogger(Main.class);

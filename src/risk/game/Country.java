@@ -18,8 +18,6 @@ public class Country {
 	private Player player;
 	private int continentOrder;
 	
-	
-	
 	public Country(boolean continentBorder, int numberOfNeighbors, String name, Continent continent, int x, int y, int width, int height, String nameLabel, int continentOrder) {
 		this.continentBorder = continentBorder;
 		this.neighbors = new Country[numberOfNeighbors];

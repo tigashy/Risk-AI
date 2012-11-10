@@ -1,5 +1,7 @@
 package risk.game;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 import org.apache.log4j.Logger;
@@ -33,6 +35,78 @@ public class Engine {
 	public void run() {
 		initPlayers();
 		
+	}
+	
+	private int diceWert() {
+		return (int) (Math.random()* (7 - 1) + 1);
+	}
+	
+	public boolean attack(Country attacker, Country defender){
+		int abbruch= 0;
+		while(abbruch!= 1){
+			int attackerDice [] = null;
+			int defenderDice[] = null;
+			if(attacker.getNumberOfArmies() >3){
+				attackerDice = new int[3];
+			}
+			else{
+				attackerDice = new int[attacker.getNumberOfArmies()];
+			}
+			if(defender.getNumberOfArmies() >2){
+				defenderDice = new int[2];
+			}
+			else{
+				defenderDice = new int[defender.getNumberOfArmies()];
+			}		
+			for(int i = 0; i <attackerDice.length; i++)
+			{
+				attackerDice[i] = diceWert();
+			}
+			for(int i = 0; i <defenderDice.length; i++)
+			{
+				defenderDice[i] = diceWert();
+			}
+			//sortieren
+			Arrays.sort(defenderDice);
+			Arrays.sort(attackerDice);
+			if(defenderDice.length == 2)
+				sortTwo(defenderDice);
+			if(attackerDice.length == 2)
+				sortTwo(attackerDice);
+			if(attackerDice.length == 3)
+				sortThree(attackerDice);
+			
+			if(attackerDice[0]> defenderDice[0])
+				defender.increasseNumberOfArmies(-1);
+			else if(attackerDice[0] <= defenderDice[0])
+				attacker.increasseNumberOfArmies(-1);
+			if(defenderDice.length == 2 && attackerDice.length > 1)
+			{
+				if(attackerDice[1]> defenderDice[1])
+					defender.increasseNumberOfArmies(-1);
+				else if(attackerDice[1] <= defenderDice[1])
+					attacker.increasseNumberOfArmies(-1);
+			}
+			
+			if(attacker.getNumberOfArmies() == 1 || defender.getNumberOfArmies() == 0 )
+				abbruch = 1;
+		}
+		if(attacker.getNumberOfArmies() == 1)
+			return false;
+		
+		return true;
+	}
+	
+	
+	private void sortTwo(int array[]){
+		int temp = array[0];
+		array[0] = array[1];
+		array[1] = temp;
+	}
+	private void sortThree(int array[]){
+		int temp = array[0];
+		array[0] = array[2];
+		array[2] = temp;
 	}
 	
 /*	public void insDice(){
