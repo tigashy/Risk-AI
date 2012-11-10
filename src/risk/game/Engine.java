@@ -34,7 +34,9 @@ public class Engine {
 
 	public void run() {
 		initPlayers();
-		
+		while (!gameFinished()) {
+			
+		}
 	}
 	
 	private int diceWert() {
@@ -119,6 +121,14 @@ public class Engine {
 		
 	}
 	*/
+	private boolean gameFinished() {
+		for (Player p:playerList) {
+			if (p.controledCountries.size() == 42) {
+				return true;
+			}
+		}
+		return false;
+	}
 	
 	private void initPlayers() {
 		playerList = new Player[gui.getPlayerCount()];

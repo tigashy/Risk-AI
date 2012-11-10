@@ -15,7 +15,7 @@ public class Agent extends Player {
 		this.currentPaths = new ArrayList<Path>();
 	}
 	
-	public void buildAllPaths() {
+	public void buildPathsForAllCountries() {
 		currentPaths.clear();
 		for (Country c:this.controledCountries) {
 			if (c.hasEnemyNeighbor()) {
