@@ -2,7 +2,7 @@ package risk.game;
 
 import java.util.ArrayList;
 
-public class Player {
+public abstract class Player {
 	private PlayerColor c;
 	protected ArrayList<Country> controledCountries;
 	private RiscCard[] riscCard;
@@ -17,7 +17,7 @@ public class Player {
 		}	
 	}
 	
-	public Player(PlayerColor c ){
+	protected Player(PlayerColor c ){
 		this.c = c;
 		this.riscCard = new RiscCard[5];
 		for(int i = 0; i< riscCard.length;i++)
@@ -92,6 +92,19 @@ public class Player {
 	public void addCountry(Country c) {
 		this.controledCountries.add(c);
 	}
+	
+	/**
+	 * Needs to implement the actions of phase 1
+	 */
+	public abstract void newArmies();
+	/**
+	 * Needs to implement the actions of phase 2
+	 */
+	public abstract void attack();
+	/**
+	 * Needs to implement the actions of phase 3
+	 */
+	public abstract void repositionArmies();
 }
 
 

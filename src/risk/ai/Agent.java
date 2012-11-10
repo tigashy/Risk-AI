@@ -24,4 +24,22 @@ public class Agent extends Player {
 		}
 	}
 
+	@Override
+	public void newArmies() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void attack() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void repositionArmies() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

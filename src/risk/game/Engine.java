@@ -1,12 +1,12 @@
 package risk.game;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Random;
 
 import org.apache.log4j.Logger;
 
 import risk.Main;
+import risk.ai.Agent;
 import risk.gui.Gui;
 
 public class Engine {
@@ -134,9 +134,11 @@ public class Engine {
 		playerList = new Player[gui.getPlayerCount()];
 		/*
 		 * Setting the colors for each player
+		 * 
+		 * NOTE: In this version all players are created as Agents
 		 */
 		for (int i = 0; i < playerList.length; i++) {
-			playerList[i] = new Player(PlayerColor.values()[i]);
+			playerList[i] = new Agent(PlayerColor.values()[i]);
 		}
 		
 		/*
