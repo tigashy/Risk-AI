@@ -34,9 +34,18 @@ public class Engine {
 
 	public void run() {
 		initPlayers();
+		int currentPlayerIndex = 0;
 		while (!gameFinished()) {
-			
+			Player currentPlayer = playerList[currentPlayerIndex];
+			currentPlayer.newArmies();
+			currentPlayer.attack();
+			currentPlayer.repositionArmies();
+			currentPlayerIndex++;
+			if (currentPlayerIndex >= playerList.length) {
+				currentPlayerIndex = 0;
+			}
 		}
+		System.out.println("End of Game.");
 	}
 	
 	private int diceWert() {

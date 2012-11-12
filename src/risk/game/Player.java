@@ -7,15 +7,6 @@ public abstract class Player {
 	protected ArrayList<Country> controledCountries;
 	private RiscCard[] riscCard;
 	
-	public void setRiscCard(RiscCard card){
-		for(int i = 0; i< riscCard.length; i++)
-		{
-			if(riscCard[i]== null){
-				this.riscCard[i] = card;
-				break;
-			}
-		}	
-	}
 	
 	protected Player(PlayerColor c ){
 		this.c = c;
@@ -27,6 +18,25 @@ public abstract class Player {
 		this.controledCountries = new ArrayList<Country>(42);
 	}
 	
+	protected int getReceivedArmies() {
+		int armies = this.controledCountries.size() / 3;
+		//TODO implement method in Engine to return wether this player object controls complete continents.
+		if (armies >= 3) {
+			return armies;
+		} else {
+			return 3;
+		}
+	}
+	
+	public void setRiscCard(RiscCard card){
+		for(int i = 0; i< riscCard.length; i++)
+		{
+			if(riscCard[i]== null){
+				this.riscCard[i] = card;
+				break;
+			}
+		}	
+	}
 	public boolean checkRiscCard()
 	{
 		if(this.riscCard[4] != null)
