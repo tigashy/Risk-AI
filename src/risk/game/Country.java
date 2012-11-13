@@ -7,7 +7,7 @@ import javax.swing.JLabel;
 
 import risk.gui.ImageLabel;
 
-public class Country {
+public class Country implements Comparable<Country> {
 	
 	private boolean continentBorder;
 	private Country[] neighbors;
@@ -98,5 +98,15 @@ public class Country {
 
 	public void setPlayer(Player player) {
 		this.player = player;
+	}
+
+	/**
+	 * Note: this class has a natural ordering that is inconsistent with equals
+	 * @param o
+	 * @return
+	 */
+	@Override
+	public int compareTo(Country c) {
+		return this.numberOfArmies - c.numberOfArmies;
 	}
 }

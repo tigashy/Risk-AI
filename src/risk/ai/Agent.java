@@ -1,6 +1,7 @@
 package risk.ai;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import risk.game.Country;
 import risk.game.Player;
@@ -27,10 +28,25 @@ public class Agent extends Player {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public void newArmies() {
+	public void newArmies(int continentArmies) {		
+		int receivedArmies = continentArmies + this.getReceivedArmies() + this.getRiskCardBonuesArmies();
+		int defenseArmies = receivedArmies / 2 + receivedArmies % 2;
+		int attackArmies = receivedArmies / 2;
+		Collections.sort(this.controledCountries);
+		int i = 0;
+		while (defenseArmies > 0) {
+			if (i >= this.controledCountries.size()) {
+				i = 0;
+			}
+			Country c = this.controledCountries.get(i++);
+			if (c.isContinentBorder()) {
+				c.increasseNumberOfArmies(1);
+				defenseArmies--;
+			}
+		}
 		buildPathsForAllCountries();
-
 	}
 
 	@Override

@@ -20,9 +20,7 @@ public class Engine {
 	private Gui gui;
 	private Player[] playerList;
 	private RiscCard[] riskCards;
-	private static final Logger logger = Logger.getLogger(Main.class);
 	public int waitingTime;
-	private int riscCard=0;
 	
 	
 	public Engine(int waitingTime) {
@@ -36,8 +34,8 @@ public class Engine {
 		initPlayers();
 		int currentPlayerIndex = 0;
 		while (!gameFinished()) {
-			Player currentPlayer = playerList[currentPlayerIndex];
-			currentPlayer.newArmies();
+			Player currentPlayer = playerList[currentPlayerIndex];			
+			currentPlayer.newArmies(checkContinentsForSingleOwner(currentPlayer));
 			currentPlayer.attack();
 			currentPlayer.repositionArmies();
 			currentPlayerIndex++;
@@ -48,6 +46,29 @@ public class Engine {
 		System.out.println("End of Game.");
 	}
 	
+	private int checkContinentsForSingleOwner(Player p) {
+		int armies = 0;
+		if (p == this.northAmerica.checkIfControledByOnePlayer()) {
+			armies += this.northAmerica.getBonusArmies();
+		}
+		if (p == this.southAmerica.checkIfControledByOnePlayer()) {
+			armies += this.southAmerica.getBonusArmies();
+		}
+		if (p == this.europe.checkIfControledByOnePlayer()) {
+			armies += this.europe.getBonusArmies();
+		}
+		if (p == this.africa.checkIfControledByOnePlayer()) {
+			armies += this.africa.getBonusArmies();
+		}
+		if (p == this.asia.checkIfControledByOnePlayer()) {
+			armies += this.asia.getBonusArmies();
+		}
+		if (p == this.australia.checkIfControledByOnePlayer()) {
+			armies += this.australia.getBonusArmies();
+		}
+		return armies;
+	}
+
 	private int diceWert() {
 		return (int) (Math.random()* (7 - 1) + 1);
 	}

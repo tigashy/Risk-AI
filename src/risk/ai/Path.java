@@ -5,26 +5,26 @@ import java.util.ArrayList;
 import risk.game.Country;
 
 public class Path {
-	private ArrayList<Country> countries;
-	private int numberOfArmies;
+	private ArrayList<Node> nodes;
+	private float probabilityOfSuccess;
 	
 	public Path(Country root) {
-		this.countries = new ArrayList<Country>();
-		this.countries.add(root);
-		this.numberOfArmies = root.getNumberOfArmies();
+		this.nodes = new ArrayList<Node>();
+		this.nodes.add(new Node(root));
+		this.probabilityOfSuccess = 0.0f;
 	}
-	public void addCountry(Country c) {
-		this.countries.add(c);
-		this.numberOfArmies += c.getNumberOfArmies();
+	public void addCountry(Node n) {
+		this.nodes.add(n);
+		this.probabilityOfSuccess += n.getCountry().getNumberOfArmies();
 	}
-	public ArrayList<Country> getCountries() {
-		return this.countries;
+	public ArrayList<Node> getCountries() {
+		return this.nodes;
 	}
-	public int getNumberOfArmies() {
-		return this.numberOfArmies;
+	public float getNumberOfArmies() {
+		return this.probabilityOfSuccess;
 	}
-	public boolean isCountryInPath(Country c) {
-		return this.countries.contains(c);
+	public boolean isCountryInPath(Node n) {
+		return this.nodes.contains(n);
 	}
 	
 }

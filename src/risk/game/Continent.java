@@ -16,6 +16,22 @@ public class Continent {
 	public String toString() {
 		return name;
 	}
+	
+	public Player checkIfControledByOnePlayer() {
+		Player p = this.countries[0].getPlayer();
+		boolean singleOwner = true;
+		for (int i = 1; i < this.countries.length; i++) {
+			if (p != this.countries[i].getPlayer()) {
+				singleOwner = false;
+				break;
+			}
+		}
+		if (singleOwner) {
+			return p;
+		} else {
+			return null;
+		}
+	}
 
 	public Country[] getCountries() {
 		return countries;
