@@ -17,11 +17,12 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int waitingTime = 0;
+		int playerCount = 2;
 		if (args.length == 1) {
-			waitingTime = Integer.parseInt(args[0]);
+			playerCount = Integer.parseInt(args[0]);
 		} 
-		gameEngine = new Engine(waitingTime);
+		gameEngine = new Engine(playerCount);
+		gameEngine.run();
 	}
 
 }

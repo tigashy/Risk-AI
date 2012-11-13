@@ -536,7 +536,7 @@ public class Gui {
 		frame.setSize(980, 600);
 		frame.setTitle("Risiko");	
 		frame.setResizable(false);
-		Player();	    
+		Game();	    
 		frame.setVisible(true);
 	}
 	

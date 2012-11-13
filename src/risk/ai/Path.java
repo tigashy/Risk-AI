@@ -28,9 +28,20 @@ public class Path implements Cloneable {
 	public Node getCurrentNode() {
 		return this.nodes.get(currentNodeIndex);
 	}
+	public Node getRoot() {
+		return this.nodes.get(0);
+	}
 
 	public int getCurrentPosition() {
 		return this.currentNodeIndex;
+	}
+	public boolean checkIfInPath(Country c) {
+		for (Node n:this.nodes) {
+			if (c == n.getCountry()) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public void deleteNode() {
