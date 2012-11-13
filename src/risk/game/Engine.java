@@ -30,7 +30,7 @@ public class Engine {
 		initPlayers();
 		int currentPlayerIndex = 0;
 		int counter = 0;
-		while (!gameFinished()) {
+		while (!checkCountries()) {
 			Player currentPlayer = playerList[currentPlayerIndex];			
 			currentPlayer.newArmies(checkContinentsForSingleOwner(currentPlayer));
 			currentPlayer.attack();
@@ -78,9 +78,25 @@ public class Engine {
 		
 	}
 	*/
+	
+	private boolean checkCountries()
+	{
+		for (Player p:playerList) {
+			if (p == this.northAmerica.checkIfControledByOnePlayer()
+					&& p == this.southAmerica.checkIfControledByOnePlayer()
+					&& p == this.europe.checkIfControledByOnePlayer()
+					&& p == this.africa.checkIfControledByOnePlayer()
+					&& p == this.asia.checkIfControledByOnePlayer()
+					&& p == this.australia.checkIfControledByOnePlayer()) {
+				return true;
+			}				
+		} 	
+		return false;
+	}
+	
 	private boolean gameFinished() {
 		for (Player p:playerList) {
-			if (p.controledCountries.size() == 42) {
+			if (p.controledCountries.size() >= 41) {
 				return true;
 			}
 		}

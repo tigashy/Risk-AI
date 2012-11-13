@@ -77,24 +77,27 @@ public class Agent extends Player {
 			}
 		}
 		buildPathsForAllCountries();
-		usedPath = currentPaths.get(0);
-		for (Path p: currentPaths) {
-			if (p.getProbabilityOfSuccess() > usedPath.getProbabilityOfSuccess()) {
-				usedPath = p;
+		if(currentPaths.size()>0)
+			usedPath = currentPaths.get(0);
+			{for (Path p: currentPaths) {
+				if (p.getProbabilityOfSuccess() > usedPath.getProbabilityOfSuccess()) {
+					usedPath = p;
+				}
 			}
+			System.out.print("New path (Probability: " + usedPath.getProbabilityOfSuccess() + "; Armies: " + usedPath.getRoot().getCountry().getNumberOfArmies() + "): ");
+			for (Node n : usedPath.getNodes()) {
+				System.out.print(n.getCountry().getName() + " -> ");
+			}
+			System.out.println();
+			usedPath.getRoot().getCountry().increasseNumberOfArmies(attackArmies);
+		
 		}
-		System.out.print("New path (Probability: " + usedPath.getProbabilityOfSuccess() + "; Armies: " + usedPath.getRoot().getCountry().getNumberOfArmies() + "): ");
-		for (Node n : usedPath.getNodes()) {
-			System.out.print(n.getCountry().getName() + " -> ");
-		}
-		System.out.println();
-		usedPath.getRoot().getCountry().increasseNumberOfArmies(attackArmies);
 	}
 
 	@Override
 	public void attack() {
 		Country currentAttacker = usedPath.getRoot().getCountry();
-		int i = 0;
+		int i = 1;
 		while (currentAttacker.getNumberOfArmies() > 1 && i < usedPath.getNodes().size()) {
 			if (this.attack(currentAttacker, this.usedPath.getNodes().get(i).getCountry())) {
 				currentAttacker = this.usedPath.getNodes().get(i).getCountry();
@@ -148,11 +151,12 @@ public class Agent extends Player {
 			if(attackerDice.length == 3)
 				sortThree(attackerDice);
 			
-			if(attackerDice[0]> defenderDice[0])
+			if(attackerDice[0]>
+			defenderDice[0])
 				defender.increasseNumberOfArmies(-1);
 			else if(attackerDice[0] <= defenderDice[0])
 				attacker.increasseNumberOfArmies(-1);
-			if(defenderDice.length == 2 && attackerDice.length > 1)
+			if(defenderDice.length == 2 && attackerDice.length > 1 && attacker.getNumberOfArmies() > 1 && defender.getNumberOfArmies() > 1)
 			{
 				if(attackerDice[1]> defenderDice[1])
 					defender.increasseNumberOfArmies(-1);
@@ -160,7 +164,7 @@ public class Agent extends Player {
 					attacker.increasseNumberOfArmies(-1);
 			}
 			
-			if(attacker.getNumberOfArmies() == 1 || defender.getNumberOfArmies() == 0 )
+			if(attacker.getNumberOfArmies() <= 1 || defender.getNumberOfArmies() <= 0 )
 				abbruch = 1;
 		}
 		if(attacker.getNumberOfArmies() == 1) {
