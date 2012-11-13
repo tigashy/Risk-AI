@@ -40,6 +40,9 @@ public class Country implements Comparable<Country> {
 	
 	public boolean hasEnemyNeighbor() {
 		for (Country c:this.neighbors) {
+			if (c == null) {
+				continue;
+			}
 			if (c.player != this.player) {
 				return true;
 			}

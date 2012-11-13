@@ -13,12 +13,15 @@ public class Agent extends Player {
 
 	public Agent(PlayerColor c) {
 		super(c);
-		this.currentPaths = new ArrayList<Path>();
+		this.currentPaths = new ArrayList<Path>(1);
 	}
 
 	private void buildPathsForAllCountries() {
 		currentPaths.clear();
 		for (Country c : this.controledCountries) {
+			if (c == null) {
+				continue;
+			}
 			// only build trees for countries with at least 2 armies in it and a
 			// neighbor country controled by the enemy
 			if (c.hasEnemyNeighbor() && c.getNumberOfArmies() > 1) {
@@ -50,7 +53,6 @@ public class Agent extends Player {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public void newArmies(int continentArmies) {		
 		int receivedArmies = continentArmies + this.getReceivedArmies() + this.getRiskCardBonuesArmies();

@@ -33,6 +33,7 @@ public class Engine {
 	public void run() {
 		initPlayers();
 		int currentPlayerIndex = 0;
+		int counter = 0;
 		while (!gameFinished()) {
 			Player currentPlayer = playerList[currentPlayerIndex];			
 			currentPlayer.newArmies(checkContinentsForSingleOwner(currentPlayer));
