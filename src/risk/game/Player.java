@@ -46,17 +46,17 @@ public abstract class Player {
 	}
 
 	public void deleteRiscCard(){
-		int solieder=0;
-		int cavalyman=0;
+		int soldier=0;
+		int cavalryman=0;
 		int canon=0;
 		int joker=0;
 		for(int i = 0; i < riscCard.length; i++)
 		{
 			if(this.riscCard[i].getSymbol() == 1){
-				solieder++;
+				soldier++;
 			}
 			else if(this.riscCard[i].getSymbol() == 2){
-				cavalyman++;
+				cavalryman++;
 			}
 			else if(this.riscCard[i].getSymbol() == 3){
 				canon++;
@@ -65,11 +65,11 @@ public abstract class Player {
 				joker++;
 			}
 		}
-		if(solieder > 3){delete(1,0);}
-		else if(cavalyman > 3){delete(2,0);}
+		if(soldier > 3){delete(1,0);}
+		else if(cavalryman > 3){delete(2,0);}
 		else if(canon > 3){delete(3,0);}
-		else if ((solieder+ joker) >3){int a = delete(1,0); delete(0,a);}
-		else if ((cavalyman+ joker) >3){int a = delete(2,0);delete(0,a);}
+		else if ((soldier+ joker) >3){int a = delete(1,0); delete(0,a);}
+		else if ((cavalryman+ joker) >3){int a = delete(2,0);delete(0,a);}
 		else if ((canon+ joker) >3){int a = delete(3,0);delete(0,a);}
 	}
 
