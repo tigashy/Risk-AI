@@ -4,27 +4,64 @@ import java.util.ArrayList;
 
 import risk.game.Country;
 
-public class Path {
+public class Path implements Cloneable {
 	private ArrayList<Node> nodes;
 	private float probabilityOfSuccess;
-	
+	private int armiesAvailableForAttack;
+	private int currentNodeIndex;
+
 	public Path(Country root) {
 		this.nodes = new ArrayList<Node>();
 		this.nodes.add(new Node(root));
-		this.probabilityOfSuccess = 0.0f;
+		this.probabilityOfSuccess = 1f;
+		this.armiesAvailableForAttack = root.getNumberOfArmies() - 1;
+		this.currentNodeIndex = 0;
 	}
-	public void addCountry(Node n) {
+
+	private Path() {
+
+	}
+	public boolean armiesLeft() {
+		return armiesAvailableForAttack > 1;
+	}
+
+	public Node getCurrentNode() {
+		return this.nodes.get(currentNodeIndex);
+	}
+
+	public int getCurrentPosition() {
+		return this.currentNodeIndex;
+	}
+
+	public void deleteNode() {
+		this.nodes.remove(nodes.size() - 1);
+		this.currentNodeIndex--;
+		this.armiesAvailableForAttack++;
+	}
+
+	public void addNode(Node n) {
 		this.nodes.add(n);
-		this.probabilityOfSuccess += n.getCountry().getNumberOfArmies();
+		currentNodeIndex++;
+		this.probabilityOfSuccess *= this.armiesAvailableForAttack-- / n.getCountry().getNumberOfArmies();
+
 	}
-	public ArrayList<Node> getCountries() {
+
+	public ArrayList<Node> getNodes() {
 		return this.nodes;
 	}
-	public float getNumberOfArmies() {
+
+	public float getProbabilityOfSuccess() {
 		return this.probabilityOfSuccess;
 	}
-	public boolean isCountryInPath(Node n) {
-		return this.nodes.contains(n);
+
+	@SuppressWarnings("unchecked")
+	public Path clone() {
+		Path p = new Path();
+		p.nodes = (ArrayList<Node>) this.nodes.clone();
+		p.probabilityOfSuccess = this.probabilityOfSuccess;
+		p.armiesAvailableForAttack = this.armiesAvailableForAttack;
+		p.currentNodeIndex = this.currentNodeIndex;
+		return p;
 	}
-	
+
 }

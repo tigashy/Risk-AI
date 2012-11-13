@@ -15,7 +15,7 @@ public abstract class Player {
 		for (int i = 0; i < riscCard.length; i++) {
 			riscCard[i] = new RiscCard(4);
 		}
-		this.controledCountries = new ArrayList<Country>(42);
+		this.controledCountries = new ArrayList<Country>();
 	}
 
 	protected int getReceivedArmies() {

@@ -23,8 +23,30 @@ public class Agent extends Player {
 			// neighbor country controled by the enemy
 			if (c.hasEnemyNeighbor() && c.getNumberOfArmies() > 1) {
 				Path p = new Path(c);
-
+				Country t = p.getCurrentNode().returnNextNeighbor();
+				while (p.getCurrentPosition() != 0 && t != null) {
+					while (t != null) {
+						if (p.armiesLeft()) {
+							p.addNode(new Node(t));
+							t = p.getCurrentNode().returnNextNeighbor();							
+						} else {
+							t = null;
+						}
+					}
+					currentPaths.add(p.clone());
+					while (t == null) {
+						p.deleteNode();
+						t = p.getCurrentNode().returnNextNeighbor();
+					}
+				}
 			}
+		}
+		for (Path p:currentPaths) {
+			System.out.print("New path: ");
+			for (Node n:p.getNodes()) {
+				System.out.print(n.getCountry().getName() + " -> ");
+			}
+			System.out.println();
 		}
 	}
 
