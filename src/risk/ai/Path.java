@@ -42,7 +42,7 @@ public class Path implements Cloneable {
 	public void addNode(Node n) {
 		this.nodes.add(n);
 		currentNodeIndex++;
-		this.probabilityOfSuccess *= this.armiesAvailableForAttack-- / n.getCountry().getNumberOfArmies();
+		this.probabilityOfSuccess *= (float)this.armiesAvailableForAttack-- / (float)n.getCountry().getNumberOfArmies();
 
 	}
 

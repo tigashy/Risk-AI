@@ -231,7 +231,7 @@ public class Engine {
 		northAmerica.setCountry(new Country(true, 4, "Greenland", northAmerica, 260, 0, 200, 200, "nAmerika_5", 4), 4);
 		northAmerica.setCountry(new Country(false, 4, "Northwest Territory", northAmerica, 15, 0, 300, 200, "nAmerika_6", 5), 5);
 		northAmerica.setCountry(new Country(false, 6, "Ontario", northAmerica, 135, 55, 200, 200, "nAmerika_7", 6), 6);
-		northAmerica.setCountry(new Country(false, 4, "Quebec", northAmerica, 198, 48, 200, 200, "nAmerika_8", 7), 7);
+		northAmerica.setCountry(new Country(false, 3, "Quebec", northAmerica, 198, 48, 200, 200, "nAmerika_8", 7), 7);
 		northAmerica.setCountry(new Country(false, 4, "Western United States", northAmerica, 66, 90, 200, 200, "nAmerika_9", 8), 8);
 
 		for (int i = 0; i < northAmerica.getCountries().length; i++) {
@@ -351,8 +351,7 @@ public class Engine {
 		/* Setting neighbors for Quebec */
 		northAmerica.getCountry(7).setNeighbor(northAmerica.getCountry(3), 0);
 		northAmerica.getCountry(7).setNeighbor(northAmerica.getCountry(4), 1);
-		northAmerica.getCountry(7).setNeighbor(northAmerica.getCountry(5), 2);
-		northAmerica.getCountry(7).setNeighbor(northAmerica.getCountry(6), 3);
+		northAmerica.getCountry(7).setNeighbor(northAmerica.getCountry(6), 2);
 		
 		/* Setting neighbors for Western United States */
 		northAmerica.getCountry(8).setNeighbor(northAmerica.getCountry(1), 0);
@@ -421,10 +420,10 @@ public class Engine {
 		europe.getCountry(5).setNeighbor(asia.getCountry(10), 5);
 		
 		/* Setting neighbors for Western Europe */
-		europe.getCountry(3).setNeighbor(europe.getCountry(0), 0);
-		europe.getCountry(3).setNeighbor(europe.getCountry(2), 1);
-		europe.getCountry(3).setNeighbor(europe.getCountry(4), 2);
-		europe.getCountry(3).setNeighbor(africa.getCountry(4), 3);
+		europe.getCountry(6).setNeighbor(europe.getCountry(0), 0);
+		europe.getCountry(6).setNeighbor(europe.getCountry(2), 1);
+		europe.getCountry(6).setNeighbor(europe.getCountry(4), 2);
+		europe.getCountry(6).setNeighbor(africa.getCountry(4), 3);
 		
 		/* Setting neighbors for Congo */
 		africa.getCountry(0).setNeighbor(africa.getCountry(1), 0);
@@ -455,6 +454,7 @@ public class Engine {
 		africa.getCountry(4).setNeighbor(africa.getCountry(2), 2);
 		africa.getCountry(4).setNeighbor(southAmerica.getCountry(1), 3);
 		africa.getCountry(4).setNeighbor(europe.getCountry(6), 4);
+		africa.getCountry(4).setNeighbor(europe.getCountry(4), 5);
 		
 		/* Setting neighbors for South Africa */
 		africa.getCountry(5).setNeighbor(africa.getCountry(0), 0);

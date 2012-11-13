@@ -13,7 +13,7 @@ public class Agent extends Player {
 
 	public Agent(PlayerColor c) {
 		super(c);
-		this.currentPaths = new ArrayList<Path>(1);
+		this.currentPaths = new ArrayList<Path>();
 	}
 
 	private void buildPathsForAllCountries() {
@@ -22,31 +22,32 @@ public class Agent extends Player {
 			if (c == null) {
 				continue;
 			}
-			// only build trees for countries with at least 2 armies in it and a
-			// neighbor country controled by the enemy
 			if (c.hasEnemyNeighbor() && c.getNumberOfArmies() > 1) {
 				Path p = new Path(c);
 				Country t = p.getCurrentNode().returnNextNeighbor();
-				while (p.getCurrentPosition() != 0 && t != null) {
+				while (!(p.getCurrentPosition() == 0 && t == null)) {
 					while (t != null) {
 						if (p.armiesLeft()) {
 							p.addNode(new Node(t));
-							t = p.getCurrentNode().returnNextNeighbor();							
+							t = p.getCurrentNode().returnNextNeighbor();
 						} else {
 							t = null;
 						}
 					}
 					currentPaths.add(p.clone());
 					while (t == null) {
+						if (p.getCurrentPosition() == 0) {
+							break;
+						}
 						p.deleteNode();
 						t = p.getCurrentNode().returnNextNeighbor();
 					}
 				}
 			}
 		}
-		for (Path p:currentPaths) {
-			System.out.print("New path: ");
-			for (Node n:p.getNodes()) {
+		for (Path p : currentPaths) {
+			System.out.print("New path (Probability: " + p.getProbabilityOfSuccess() + "): ");
+			for (Node n : p.getNodes()) {
 				System.out.print(n.getCountry().getName() + " -> ");
 			}
 			System.out.println();
@@ -54,8 +55,9 @@ public class Agent extends Player {
 	}
 
 	@Override
-	public void newArmies(int continentArmies) {		
-		int receivedArmies = continentArmies + this.getReceivedArmies() + this.getRiskCardBonuesArmies();
+	public void newArmies(int continentArmies) {
+		int receivedArmies = continentArmies + this.getReceivedArmies()
+				+ this.getRiskCardBonuesArmies();
 		int defenseArmies = receivedArmies / 2 + receivedArmies % 2;
 		int attackArmies = receivedArmies / 2;
 		Collections.sort(this.controledCountries);
