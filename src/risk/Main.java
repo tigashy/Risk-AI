@@ -17,7 +17,7 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int playerCount = 2;
+		int playerCount = 5;
 		if (args.length == 1) {
 			playerCount = Integer.parseInt(args[0]);
 		} 
