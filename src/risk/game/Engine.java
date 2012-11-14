@@ -31,7 +31,7 @@ public class Engine {
         do{
             t1 = System.currentTimeMillis();
         }
-        while(t1 - t0 < 1000000);
+        while(t1 - t0 < 500);
 	}
 
 	public void run() {

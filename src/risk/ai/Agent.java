@@ -24,7 +24,7 @@ public class Agent extends Player {
 			if (c == null) {
 				continue;
 			}
-			if (c.hasEnemyNeighbor() && c.getNumberOfArmies() > 1) {
+			if (c.hasEnemyNeighbor() /*&& c.getNumberOfArmies() > 1*/) {
 				Path p = new Path(c);
 				Country t = p.getCurrentNode().returnNextNeighbor();
 				while (!(p.getCurrentPosition() == 0 && t == null)) {
