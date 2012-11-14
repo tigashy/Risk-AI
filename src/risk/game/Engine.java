@@ -16,14 +16,14 @@ public class Engine {
 	private Gui gui;
 	private Player[] playerList;
 	private RiscCard[] riskCards;
-	public int waitingTime;
+	public int playerCount;
 	
 	
 	public Engine(int waitingTime) {
 		gui = new Gui();
 		initCountries();
 		initRiskCards();
-		this.waitingTime = waitingTime;
+		this.playerCount = waitingTime;
 	}
 
 	public void run() {
@@ -104,7 +104,7 @@ public class Engine {
 	}
 	
 	private void initPlayers() {
-		playerList = new Player[this.waitingTime];
+		playerList = new Player[this.playerCount];
 		/*
 		 * Setting the colors for each player
 		 * 
