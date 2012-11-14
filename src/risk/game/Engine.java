@@ -96,7 +96,7 @@ public class Engine {
 	
 	private boolean gameFinished() {
 		for (Player p:playerList) {
-			if (p.controledCountries.size() >= 41) {
+			if (p.controlledCountries.size() >= 41) {
 				return true;
 			}
 		}

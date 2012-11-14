@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public abstract class Player {
 	private PlayerColor c;
-	protected ArrayList<Country> controledCountries;
+	protected ArrayList<Country> controlledCountries;
 	private RiscCard[] riscCard;
 	protected static int riskCardBonus = 0;
 	private static final int[] riskCardBonusValues = { 4, 6, 8, 10, 12, 15 };
@@ -15,11 +15,11 @@ public abstract class Player {
 		for (int i = 0; i < riscCard.length; i++) {
 			riscCard[i] = new RiscCard(4);
 		}
-		this.controledCountries = new ArrayList<Country>();
+		this.controlledCountries = new ArrayList<Country>();
 	}
 
 	protected int getReceivedArmies() {
-		int armies = this.controledCountries.size() / 3;
+		int armies = this.controlledCountries.size() / 3;
 		if (armies >= 3) {
 			return armies;
 		} else {
@@ -125,7 +125,7 @@ public abstract class Player {
 	}
 
 	public void addCountry(Country c) {
-		this.controledCountries.add(c);
+		this.controlledCountries.add(c);
 	}
 
 	/**

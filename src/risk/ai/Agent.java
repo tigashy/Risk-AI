@@ -20,7 +20,7 @@ public class Agent extends Player {
 
 	private void buildPathsForAllCountries() {
 		currentPaths.clear();
-		for (Country c : this.controledCountries) {
+		for (Country c : this.controlledCountries) {
 			if (c == null) {
 				continue;
 			}
@@ -64,13 +64,13 @@ public class Agent extends Player {
 				+ this.getRiskCardBonuesArmies();
 		int defenseArmies = receivedArmies / 2 + receivedArmies % 2;
 		int attackArmies = receivedArmies / 2;
-		Collections.sort(this.controledCountries);
+		Collections.sort(this.controlledCountries);
 		int i = 0;
 		while (defenseArmies > 0) {
-			if (i >= this.controledCountries.size()) {
+			if (i >= this.controlledCountries.size()) {
 				i = 0;
 			}
-			Country c = this.controledCountries.get(i++);
+			Country c = this.controlledCountries.get(i++);
 			if (c.isContinentBorder()) {
 				c.increasseNumberOfArmies(1);
 				defenseArmies--;
