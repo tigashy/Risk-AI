@@ -25,6 +25,14 @@ public class Engine {
 		initRiskCards();
 		this.playerCount = waitingTime;
 	}
+	private void waitTime() {
+		long t0,t1;
+        t0 = System.currentTimeMillis();
+        do{
+            t1 = System.currentTimeMillis();
+        }
+        while(t1 - t0 < 1000000);
+	}
 
 	public void run() {
 		initPlayers();
@@ -39,6 +47,7 @@ public class Engine {
 			if (currentPlayerIndex >= playerList.length) {
 				currentPlayerIndex = 0;
 			}
+			this.waitTime();
 		}
 		System.out.println("End of Game.");
 	}
